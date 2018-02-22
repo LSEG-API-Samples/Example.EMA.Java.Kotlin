@@ -136,8 +136,8 @@
 			<!-- TcpNodelay is optional: defaulted to 1 												-->
 			<!-- possible values: 1 (tcp_nodelay option set), 0 (tcp_nodelay not set)					-->
 			<TcpNodelay value="1"/>
-			<Host value="localhost"/>
-			<Port value="14002"/>
+			<Host value="172.20.33.11"/>
+			<Port value="14022"/>
 		</Channel>
 		<Channel>
 			<Name value="Channel_2"/>
