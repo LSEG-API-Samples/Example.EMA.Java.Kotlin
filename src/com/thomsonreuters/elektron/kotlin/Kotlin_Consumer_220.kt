@@ -90,14 +90,14 @@ fun main(args: Array<String>) {
     var appClient = AppclientFieldListWalk()
     //lateinit var reqMsg:ReqMsg
     try {
-        //println("Hello this is main")
+        println("Starting Kotlin_Consumer_220 application")
 
         //config = EmaFactory.createOmmConsumerConfig()
         //consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().host("172.20.33.30:14002").username("rdc"))
         consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().consumerName("Consumer_1"))
         //reqMsg = EmaFactory.createReqMsg();
 
-        consumer.registerClient(EmaFactory.createReqMsg().serviceName("ELEKTRON_DD").name("FB.O"), appClient)
+        consumer.registerClient(EmaFactory.createReqMsg().serviceName("DIRECT_FEED").name("FB.O"), appClient)
 
         Thread.sleep(60000)
 
