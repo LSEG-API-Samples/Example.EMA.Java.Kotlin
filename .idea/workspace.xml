@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff0a3ba3-cf2f-4134-9822-7e0c54df15da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/etc/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/EmaConfig.xml" afterPath="$PROJECT_DIR$/EmaConfig.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/KotlinEMAApplication.kt" afterPath="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_100.kt" />
       <change beforePath="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt" afterPath="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt" />
       <change beforePath="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt" afterPath="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt" />
     </list>
@@ -19,43 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="TestKotlin.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/TestKotlin.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kotlin_IProvider_200.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="e#44#871#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Kotlin_Consumer_220.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1681">
-              <caret line="92" column="59" lean-forward="true" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="59" />
+            <state relative-caret-position="1114">
+              <caret line="98" column="65" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="65" />
               <folding>
                 <element signature="e#44#856#0" expanded="true" />
               </folding>
@@ -63,12 +30,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmaConfig.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EmaConfig.xml">
+      <file leaf-file-name="Kotlin_IProvider_200.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="327" column="40" lean-forward="false" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="40" />
+            <state relative-caret-position="337">
+              <caret line="132" column="43" lean-forward="false" selection-start-line="132" selection-start-column="43" selection-end-line="132" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Kotlin_Consumer_100.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_100.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -107,16 +97,17 @@
         <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/TestKotlin.kt" />
         <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/KotlinEMAApplication.kt" />
         <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_120.kt" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/EmaConfig.xml" />
-        <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt" />
-        <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/TestKotlin2.kt" />
+        <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt" />
+        <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt" />
+        <option value="$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_100.kt" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="94" />
     <option name="y" value="-1059" />
     <option name="width" value="1698" />
@@ -140,8 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +153,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
@@ -183,7 +174,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Kotlin_Consumer_220Kt">
+  <component name="RunManager" selected="Kotlin.Kotlin_Consumer_100Kt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -236,14 +227,14 @@
       <module name="Kotlin_EMA" />
       <envs />
     </configuration>
-    <configuration name="Kotlin EMA Application" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true">
+    <configuration name="Kotlin_Consumer_100Kt" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.thomsonreuters.elektron.kotlin.KotlinEMAApplicationKt" />
+      <option name="MAIN_CLASS_NAME" value="com.thomsonreuters.elektron.kotlin.Kotlin_Consumer_100Kt" />
       <option name="WORKING_DIRECTORY" value="" />
       <module name="Kotlin_EMA" />
       <envs />
@@ -313,16 +304,11 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Kotlin.TestKotlin" />
-      <item index="1" class="java.lang.String" itemvalue="Kotlin.IProvider_200Kt" />
-      <item index="2" class="java.lang.String" itemvalue="Kotlin.Kotlin_Consumer_220Kt" />
-      <item index="3" class="java.lang.String" itemvalue="Kotlin.Kotlin EMA Application" />
+      <item index="0" class="java.lang.String" itemvalue="Kotlin.Kotlin_Consumer_100Kt" />
+      <item index="1" class="java.lang.String" itemvalue="Kotlin.TestKotlin" />
+      <item index="2" class="java.lang.String" itemvalue="Kotlin.IProvider_200Kt" />
+      <item index="3" class="java.lang.String" itemvalue="Kotlin.Kotlin_Consumer_220Kt" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Kotlin.Kotlin EMA Application" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -346,7 +332,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="94" y="-1059" width="1698" height="1068" extended-state="6" />
+    <frame x="94" y="-1059" width="1698" height="1068" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -355,7 +341,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61067855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -417,6 +403,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2604">
+          <caret line="124" column="60" lean-forward="true" selection-start-line="124" selection-start-column="60" selection-end-line="124" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmaConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6867">
+          <caret line="327" column="40" lean-forward="false" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1743">
+          <caret line="99" column="96" lean-forward="false" selection-start-line="99" selection-start-column="96" selection-end-line="99" selection-end-column="96" />
+          <folding>
+            <element signature="e#44#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/TestKotlin.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -425,13 +445,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/KotlinEMAApplication.kt">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="92" column="59" lean-forward="true" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="59" />
+          <folding>
+            <element signature="e#44#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmaConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6867">
+          <caret line="327" column="40" lean-forward="false" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/TestKotlin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_100.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1449">
           <caret line="69" column="5" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="e#44#686#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -440,7 +499,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="357">
             <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -472,13 +530,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/KotlinEMAApplication.kt">
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_100.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1281">
           <caret line="61" column="42" lean-forward="true" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
-          <folding>
-            <element signature="e#44#686#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -512,49 +567,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/KotlinEMAApplication.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="69" column="5" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="e#44#686#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="504">
-            <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EmaConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="327" column="40" lean-forward="false" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/TestKotlin2.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
-            <element signature="e#44#807#0" expanded="true" />
+            <element signature="e#44#807#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -567,23 +585,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmaConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="327" column="40" lean-forward="false" selection-start-line="327" selection-start-column="29" selection-end-line="327" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="132" column="43" lean-forward="false" selection-start-line="132" selection-start-column="43" selection-end-line="132" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_220.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1681">
-          <caret line="92" column="59" lean-forward="true" selection-start-line="92" selection-start-column="7" selection-end-line="92" selection-end-column="59" />
+        <state relative-caret-position="1114">
+          <caret line="98" column="65" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="65" />
           <folding>
             <element signature="e#44#856#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_IProvider_200.kt">
+    <entry file="file://$PROJECT_DIR$/src/com/thomsonreuters/elektron/kotlin/Kotlin_Consumer_100.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#871#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="379">
+          <caret line="60" column="36" lean-forward="false" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

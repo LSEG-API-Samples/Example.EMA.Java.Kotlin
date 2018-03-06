@@ -16,14 +16,17 @@ import com.thomsonreuters.ema.access.OmmException;
 
 class Appclient : OmmConsumerClient {
     override fun onRefreshMsg(refreshMsg: RefreshMsg, event: OmmConsumerEvent) {
+        println("Kotlin_Consumer_100: Receive Market Price Refresh message")
         println(refreshMsg)
     }
 
     override fun onUpdateMsg(updateMsg: UpdateMsg, event: OmmConsumerEvent) {
+        println("Kotlin_Consumer_100: Receive Market Price Update message")
         println(updateMsg)
     }
 
     override fun onStatusMsg(statusMsg: StatusMsg, event: OmmConsumerEvent) {
+        println("Kotlin_Consumer_100: Receive Market Price Status message")
         println(statusMsg)
     }
 
@@ -45,17 +48,18 @@ fun main(args: Array<String>) {
 
     lateinit var consumer: OmmConsumer
     lateinit  var config: OmmConsumerConfig
-    var appClient = Appclient()
+    val appClient = Appclient()
     lateinit var reqMsg:ReqMsg
     try {
-        println("Hello this is main")
+        println("Starting Kotlin_Consumer_100 application")
 
         config = EmaFactory.createOmmConsumerConfig()
-        consumer = EmaFactory.createOmmConsumer((config.host("172.20.33.30:14002").username("rdc")))
+        consumer = EmaFactory.createOmmConsumer((config.host("localhost:14002").username("rdc")))
 
         reqMsg = EmaFactory.createReqMsg();
 
-        consumer.registerClient(reqMsg.serviceName("ELEKTRON_DD").name("EUR="), appClient)
+        println("Kotlin_Consumer_100: Send item request message")
+        consumer.registerClient(reqMsg.serviceName("DIRECT_FEED").name("TRI.N"), appClient)
 
         Thread.sleep(60000)
 

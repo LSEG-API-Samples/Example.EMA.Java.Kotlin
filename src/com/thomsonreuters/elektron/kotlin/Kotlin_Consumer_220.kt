@@ -87,17 +87,17 @@ class AppclientFieldListWalk : OmmConsumerClient {
 fun main(args: Array<String>) {
     lateinit var consumer: OmmConsumer
     //lateinit  var config: OmmConsumerConfig
-    var appClient = AppclientFieldListWalk()
+    val appClient = AppclientFieldListWalk()
     //lateinit var reqMsg:ReqMsg
     try {
         println("Starting Kotlin_Consumer_220 application")
 
         //config = EmaFactory.createOmmConsumerConfig()
-        //consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().host("172.20.33.30:14002").username("rdc"))
+        //consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().host("localhost:14002").username("kotlin"))
         consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().consumerName("Consumer_1"))
         //reqMsg = EmaFactory.createReqMsg();
-
-        consumer.registerClient(EmaFactory.createReqMsg().serviceName("DIRECT_FEED").name("FB.O"), appClient)
+        println("Kotlin_Consumer_220: Send item request message")
+        consumer.registerClient(EmaFactory.createReqMsg().serviceName("DIRECT_FEED").name("TRI.N"), appClient)
 
         Thread.sleep(60000)
 

@@ -47,7 +47,7 @@ class IProviderAppClient : OmmProviderClient {
 
     fun processLoginRequest(reqMsg: ReqMsg, event: OmmProviderEvent) {
 
-        println("Receive Login Request message from ${reqMsg.name()}")
+        println("Receive Login Request message from ${reqMsg.name()}, send Login Refresh")
 
         event.provider().submit(
                 EmaFactory.createRefreshMsg()
@@ -63,7 +63,7 @@ class IProviderAppClient : OmmProviderClient {
 
     fun processMarketPriceRequest(reqMsg: ReqMsg,event: OmmProviderEvent){
 
-        println("Receive Market Price Request message")
+        println("Kotlin_IProvider_200: Receive Market Price Request message")
 
         if(itemHandle.toInt() != 0){
             processMarketPriceRequest(reqMsg,event)
@@ -80,6 +80,7 @@ class IProviderAppClient : OmmProviderClient {
         fieldList.add(EmaFactory.createFieldEntry().real(30, 9 , OmmReal.MagnitudeType.EXPONENT_0))
         fieldList.add(EmaFactory.createFieldEntry().real(31, 19 , OmmReal.MagnitudeType.EXPONENT_0))
 
+        println("Kotlin_IProvider_200: Send  Market Price Refresh message")
         event.provider().submit(
                 EmaFactory.createRefreshMsg()
                         .serviceName(reqMsg.serviceName())
@@ -106,13 +107,13 @@ class IProviderAppClient : OmmProviderClient {
 
 fun main(args: Array<String>){
     lateinit var provider: OmmProvider
-    var appCient = IProviderAppClient()
+    val appCient = IProviderAppClient()
     try{
 
-        println("Starting Kotlin_IProvider_200 application")
+        println("Starting Kotlin_IProvider_200 application, waiting for consumer application")
 
-        var fieldList: FieldList = EmaFactory.createFieldList()
-        var updateMsg: UpdateMsg = EmaFactory.createUpdateMsg()
+        val fieldList: FieldList = EmaFactory.createFieldList()
+        val updateMsg: UpdateMsg = EmaFactory.createUpdateMsg()
 
         provider = EmaFactory.createOmmProvider(EmaFactory.createOmmIProviderConfig().operationModel(OmmIProviderConfig.OperationModel.USER_DISPATCH), appCient)
 
@@ -121,6 +122,7 @@ fun main(args: Array<String>){
             Thread.sleep(1000L)
         }
 
+        println("Kotlin_IProvider_200: Send  Market Price Update messages")
         for(index in 1..59){
             var startTime: Long = System.currentTimeMillis()
 
