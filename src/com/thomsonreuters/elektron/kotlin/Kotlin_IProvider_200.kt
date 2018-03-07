@@ -70,7 +70,7 @@ class IProviderAppClient : OmmProviderClient {
             return
         }
 
-        var fieldList:FieldList = EmaFactory.createFieldList()
+        val fieldList:FieldList = EmaFactory.createFieldList()
 
         fieldList.add(EmaFactory.createFieldEntry().ascii(3, reqMsg.name()))
         fieldList.add(EmaFactory.createFieldEntry().enumValue(15, 840))
@@ -124,7 +124,7 @@ fun main(args: Array<String>){
 
         println("Kotlin_IProvider_200: Send  Market Price Update messages")
         for(index in 1..59){
-            var startTime: Long = System.currentTimeMillis()
+            val startTime: Long = System.currentTimeMillis()
 
             provider.dispatch(1000L)
 
@@ -144,8 +144,9 @@ fun main(args: Array<String>){
     } catch (excp:InterruptedException ){
         println(excp.message)
     } finally {
-        provider?.let {
+        /*provider?.let {
             provider.uninitialize()
-        }
+        }*/
+        provider.uninitialize()
     }
 }

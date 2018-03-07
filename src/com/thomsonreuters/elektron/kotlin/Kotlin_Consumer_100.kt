@@ -44,8 +44,6 @@ class Appclient : OmmConsumerClient {
 }
 
 fun main(args: Array<String>) {
-
-
     lateinit var consumer: OmmConsumer
     lateinit  var config: OmmConsumerConfig
     val appClient = Appclient()
@@ -68,9 +66,10 @@ fun main(args: Array<String>) {
     } catch (excp: OmmException) {
         println(excp.message)
     }finally {
-        consumer?.let {
+        /*consumer?.let {
             consumer.uninitialize()
-        }
+        }*/
+        consumer.uninitialize()
     }
-}
 
+}
