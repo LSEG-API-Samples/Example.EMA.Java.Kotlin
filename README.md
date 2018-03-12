@@ -91,7 +91,11 @@ This example requires the following dependencies software.
 
 ## References
 For further details, please check out the following resources:
+* [Elektron SDK Family site](https://developers.thomsonreuters.com/elektron)
 * [Elektron Java API page](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/) on the [Thomson Reuters Developer Community](https://developers.thomsonreuters.com/) web site.
+* Developer Webinar: [Introduction to Enterprise App Creation With Open-Source Elektron Message API](https://www.youtube.com/watch?v=2pyhYmgHxlU)
+* Elektron Message API Java: [Quick Start](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/quick-start)
+* Developer Article: [10 important things you need to know before you write an Elektron Real Time application](https://developers.thomsonreuters.com/article/10-important-things-you-need-know-you-write-elektron-real-time-application)
 * [Kotlin programming language](https://kotlinlang.org/)
 
 For any question related to this article or Elektron WebSocket API page, please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com/).
