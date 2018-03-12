@@ -54,40 +54,39 @@ This example requires the following dependencies software.
     - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
 3. Open IntelliJ IDEA Java IDE, select **Create New Project**.
 
-![intellij](./images/intelliJ_1.png "create new project")
+    ![intellij](./images/intelliJ_1.png "create new project")
 
 4. Select **Kotlin/JVM** in the Addition Libraries and Frameworks window, then click Next button.
 
-![intellij](./images/intelliJ_2.png "select Kotlin/JVM")
+    ![intellij](./images/intelliJ_2.png "select Kotlin/JVM")
 
 5. Set **Project location** folder to the directory from step *1* .
 
-![intellij](./images/intelliJ_3.png "set project location")
+    ![intellij](./images/intelliJ_3.png "set project location")
 
 6. The example project and sub folders will be available in IntelliJ IDEA Java IDE.
 
-![intellij](./images/intelliJ_4.png "IntelliJ IDEA Java IDE")
+    ![intellij](./images/intelliJ_4.png "IntelliJ IDEA Java IDE")
 
 7. Right click on *libs* folder, then choose **Addd as Library...**, then click Ok button to add EMA Java libraries to the project.
 
-![intellij](./images/intelliJ_5.png "add EMA Java libraries")
+    ![intellij](./images/intelliJ_5.png "add EMA Java libraries")
 
 8. Open Kotlin_IProvider_200.kt file, right click and choose **Run** to start the Kotlin_IProvider_200 provider application.
 
-![intellij](./images/intelliJ_6.png "Running Kotlin_IProvider_200")
+    ![intellij](./images/intelliJ_6.png "Running Kotlin_IProvider_200")
 
 9. The Kotlin_IProvider_200 application will be started and waiting for a consumer application.
 
-![intellij](./images/intelliJ_7.png "Running Kotlin_IProvider_200 console")
+    ![intellij](./images/intelliJ_7.png "Running Kotlin_IProvider_200 console")
 
 10. Open Kotlin_IProvider_100.kt file, right click and choose **Run** to start the Kotlin_Consumer_100 consumer application.
 
-![intellij](./images/intelliJ_8.png "Running Kotlin_Consumer_100")
+    ![intellij](./images/intelliJ_8.png "Running Kotlin_Consumer_100")
 
 11. The Kotlin_Consumer_100 application will be started, then connects and consumes data from Kotlin_IProvider_200 application.
 
-![intellij](./images/intelliJ_9.png "Running Kotlin_Consumer_100 console")
-
+    ![intellij](./images/intelliJ_9.png "Running Kotlin_Consumer_100 console")
 
 ## References
 For further details, please check out the following resources:
