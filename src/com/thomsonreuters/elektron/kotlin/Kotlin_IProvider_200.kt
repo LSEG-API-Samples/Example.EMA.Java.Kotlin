@@ -110,7 +110,7 @@ fun main(args: Array<String>){
     val appCient = IProviderAppClient()
     try{
 
-        println("Starting Kotlin_IProvider_200 application, waiting for consumer application")
+        println("Starting Kotlin_IProvider_200 application, waiting for a consumer application")
 
         val fieldList: FieldList = EmaFactory.createFieldList()
         val updateMsg: UpdateMsg = EmaFactory.createUpdateMsg()

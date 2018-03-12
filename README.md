@@ -2,7 +2,7 @@
 
 ## Overview
 
-This example project shows how to implement the [Elektron Message API Java (EMA Java)](https://developers.thomsonreuters.com/elektron/elektron-sdk-java) applications with Kotlin. The console applications source code are implemented in Kotlin programming language. All source code will be compiled to Java classes which compatible with Java virtual machine. The applications will run with these Java classes files. 
+This example project shows how to implement the [Elektron Message API Java (EMA Java)](https://developers.thomsonreuters.com/elektron/elektron-sdk-java) applications with Kotlin lanuage. The console applications source code are implemented in Kotlin programming language. All source code will be compiled to Java classes which compatible with Java virtual machine. The applications will run with these Java classes files. 
 
 The example project contains one interactive-Provider application and two consumer applications. 
 - The Kotlin_IProvider_200 shows how to implement a basic RSSL Provider application. 
@@ -19,7 +19,7 @@ This example project is compatible with EMA Java 3.1.1 ([Elektron SDK 1.1.1](htt
 
 [Kotlin](https://kotlinlang.org/) is a statically-typed programming language developed by [Jetbrains](https://www.jetbrains.com/) that runs on the Java virtual machine. Kotlin is interoperate with Java code and is reliant on Java code from the existing Java Class Library/Framework. Kotlin syntax aims for reducing Java language verbosity and complexity. Kotlin is a first-class programming language on Android OS. 
 
-Although Kotlin can also be compiled to JavaScript and Native code, this example project focus only the JVM target environment.
+Although Kotlin source code can also be compiled to JavaScript and Native code, this example project focus only the JVM target environment.
 
 ## Prerequisite
 This example requires the following dependencies software.
@@ -41,7 +41,7 @@ This example requires the following dependencies software.
 - *README.md*: readme file
 
 ## Running the Project with IntelliJ IDEA
-1. Unzip or download the example project folder into a directory of your choice
+1. Unzip or download the example project folder into a directory of your choice (example, D:\code\Kotlin_proj).
 2. Copy all required EMA Java API libraries to the "libs" folder. The required libraries are following
     - ema.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs)
     - upa.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
@@ -52,7 +52,41 @@ This example requires the following dependencies software.
     - org.apache.commons.collections.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
     - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
     - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
-3. 
+3. Open IntelliJ IDEA Java IDE, select **Create New Project**.
+
+![intellij](./images/intelliJ_1.png "create new project")
+
+4. Select **Kotlin/JVM** in the Addition Libraries and Frameworks window, then click Next button.
+
+![intellij](./images/intelliJ_2.png "select Kotlin/JVM")
+
+5. Set **Project location** folder to the directory from step *1* .
+
+![intellij](./images/intelliJ_3.png "set project location")
+
+6. The example project and sub folders will be available in IntelliJ IDEA Java IDE.
+
+![intellij](./images/intelliJ_4.png "IntelliJ IDEA Java IDE")
+
+7. Right click on *libs* folder, then choose **Addd as Library...**, then click Ok button to add EMA Java libraries to the project.
+
+![intellij](./images/intelliJ_5.png "add EMA Java libraries")
+
+8. Open Kotlin_IProvider_200.kt file, right click and choose **Run** to start the Kotlin_IProvider_200 provider application.
+
+![intellij](./images/intelliJ_6.png "Running Kotlin_IProvider_200")
+
+9. The Kotlin_IProvider_200 application will be started and waiting for a consumer application.
+
+![intellij](./images/intelliJ_7.png "Running Kotlin_IProvider_200 console")
+
+10. Open Kotlin_IProvider_100.kt file, right click and choose **Run** to start the Kotlin_Consumer_100 consumer application.
+
+![intellij](./images/intelliJ_8.png "Running Kotlin_Consumer_100")
+
+11. The Kotlin_Consumer_100 application will be started, then connects and consumes data from Kotlin_IProvider_200 application.
+
+![intellij](./images/intelliJ_9.png "Running Kotlin_Consumer_100 console")
 
 
 ## References
