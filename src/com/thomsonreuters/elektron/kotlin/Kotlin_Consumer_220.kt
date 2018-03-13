@@ -1,22 +1,22 @@
 package com.thomsonreuters.elektron.kotlin
 
-import java.util.Iterator;
-import com.thomsonreuters.ema.access.Msg;
-import com.thomsonreuters.ema.access.AckMsg;
-import com.thomsonreuters.ema.access.GenericMsg;
-import com.thomsonreuters.ema.access.RefreshMsg;
-import com.thomsonreuters.ema.access.StatusMsg;
-import com.thomsonreuters.ema.access.UpdateMsg;
-import com.thomsonreuters.ema.access.Data;
-import com.thomsonreuters.ema.access.DataType;
-import com.thomsonreuters.ema.access.DataType.DataTypes;
-import com.thomsonreuters.ema.access.EmaFactory;
-import com.thomsonreuters.ema.access.FieldEntry;
-import com.thomsonreuters.ema.access.FieldList;
-import com.thomsonreuters.ema.access.OmmConsumer;
-import com.thomsonreuters.ema.access.OmmConsumerClient;
-import com.thomsonreuters.ema.access.OmmConsumerEvent;
-import com.thomsonreuters.ema.access.OmmException;
+import java.util.Iterator
+import com.thomsonreuters.ema.access.Msg
+import com.thomsonreuters.ema.access.AckMsg
+import com.thomsonreuters.ema.access.GenericMsg
+import com.thomsonreuters.ema.access.RefreshMsg
+import com.thomsonreuters.ema.access.StatusMsg
+import com.thomsonreuters.ema.access.UpdateMsg
+import com.thomsonreuters.ema.access.Data
+import com.thomsonreuters.ema.access.DataType
+import com.thomsonreuters.ema.access.DataType.DataTypes
+import com.thomsonreuters.ema.access.EmaFactory
+import com.thomsonreuters.ema.access.FieldEntry
+import com.thomsonreuters.ema.access.FieldList
+import com.thomsonreuters.ema.access.OmmConsumer
+import com.thomsonreuters.ema.access.OmmConsumerClient
+import com.thomsonreuters.ema.access.OmmConsumerEvent
+import com.thomsonreuters.ema.access.OmmException
 
 class AppclientFieldListWalk : OmmConsumerClient {
     override fun onRefreshMsg(refreshMsg: RefreshMsg, event: OmmConsumerEvent): Unit {
