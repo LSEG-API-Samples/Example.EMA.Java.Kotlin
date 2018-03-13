@@ -74,9 +74,7 @@ class AppclientFieldListWalk : OmmConsumerClient {
                     DataTypes.ASCII -> println(fieldEntry.ascii())
                     DataTypes.ENUM -> println("${if(fieldEntry.hasEnumDisplay()) fieldEntry.enumDisplay() else fieldEntry.enumValue() }")
                     DataTypes.ERROR -> println("(${fieldEntry.error().errorCodeAsString()})")
-                    else -> {
-                        println("")
-                    }
+                    else -> println("")
                 }
             }
         }
