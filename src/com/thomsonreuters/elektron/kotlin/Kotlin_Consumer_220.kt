@@ -1,6 +1,6 @@
 package com.thomsonreuters.elektron.kotlin
 
-import java.util.Iterator
+import kotlin.collections.Iterator
 import com.thomsonreuters.ema.access.Msg
 import com.thomsonreuters.ema.access.AckMsg
 import com.thomsonreuters.ema.access.GenericMsg

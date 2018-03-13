@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="exchangename">
+	
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+
+    <property name="dist.dir" value="./"/>
+    <property name="libs.dir" value="${dist.dir}/libs"/>
+    <property name="ema.kotlin.dir" value="${dist.dir}" />
+	
+	<property name="kotlin.lib" value="D:/Project/Compilers/kotlinc/lib" />
+	
+	<typedef resource="org/jetbrains/kotlin/ant/antlib.xml" classpath="${kotlin.lib}/kotlin-ant.jar"/>
+
+    <path id="ema.classpath">
+        <pathelement path="${libs.dir}/ema.jar"/>
+    </path>
+
+    <target name="clean">
+        <echo message="Cleaning up old build output" />
+        <delete>
+            <fileset dir="${ema.kotlin.dir}/out" includes="**/*.class"/>
+            <fileset file="${ema.kotlin.dir}/out/EmaConfig.xml"/>
+        </delete>
+    </target>
+
+    <target name="build-ema-kotlin">
+        <echo message="Building EMA Java Kotlin src code" />
+        <!--<javac debug="true" debuglevel="${debuglevel}"
+               source="${source}"
+               target="${target}"
+               includeantruntime="false"
+               destdir="${ema.kotlin.dir}/out">
+            <src path="${ema.kotlin.dir}/src"/>
+            <classpath refid="exchangename.classpath"/>
+        </javac>-->
+		
+		<kotlinc 
+               includeRuntime="false"
+               output="${ema.kotlin.dir}/out">
+            <src path="${ema.kotlin.dir}/src"/>
+            <classpath refid="ema.classpath"/>
+        </kotlinc>
+		
+		<!--<kotlinc src="${ema.kotlin.dir}/src" output="hello.jar"/>-->
+        <copy file="EmaConfig.xml" todir="${ema.kotlin.dir}/out"/>
+    </target>
+
+
+    <target depends="clean,build-ema-kotlin" name="build"/>
+
+</project>
