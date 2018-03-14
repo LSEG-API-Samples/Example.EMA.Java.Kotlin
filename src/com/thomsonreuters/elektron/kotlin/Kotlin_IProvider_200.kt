@@ -122,7 +122,7 @@ fun main(args: Array<String>){
             Thread.sleep(1000L)
         }
 
-        println("Kotlin_IProvider_200: Send  Market Price Update messages")
+
         for(index in 1..59){
             val startTime: Long = System.currentTimeMillis()
 
@@ -135,7 +135,7 @@ fun main(args: Array<String>){
             fieldList.add(EmaFactory.createFieldEntry().real(31, 19 + index.toLong(), OmmReal.MagnitudeType.EXPONENT_0))
 
             provider.submit(updateMsg.clear().payload(fieldList), appCient.itemHandle)
-
+            println("Kotlin_IProvider_200: Send  Market Price Update messages")
             while(System.currentTimeMillis() - startTime < 1000){}
         }
 
