@@ -39,7 +39,7 @@ class Appclient : OmmConsumerClient {
     }
 
     override fun onAllMsg(msg: Msg, event: OmmConsumerEvent) {
-        println(msg)
+        //println(msg)
     }
 }
 

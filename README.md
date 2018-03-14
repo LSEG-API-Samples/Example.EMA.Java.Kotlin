@@ -25,7 +25,8 @@ Although Kotlin source code can also be compiled to JavaScript and Native code, 
 This example requires the following dependencies software.
 1. Java 8 SDK
 2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017 and above. You can download Intelli IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
-3. If you prefer to use Kotlin [command line compiler](https://github.com/JetBrains/kotlin/releases/latest), you can manual download and install it by following the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html).
+3. If you prefer to use Kotlin [command line compiler](https://github.com/JetBrains/kotlin/releases/latest), you can manual download and install it by follow the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html).
+4. If you prefer to use Kotlin command line compiler, [Apache ANT](http://ant.apache.org/) version 1.8.2 and above is required.
 4. [Elektron SDK Java Edition](https://developers.thomsonreuters.com/elektron/elektron-sdk-java). You can download the SDK package via this [link](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/downloads) or via [GitHub](https://github.com/thomsonreuters/Elektron-SDK) page.
 
 ## Project Files Structure
@@ -39,9 +40,10 @@ This example requires the following dependencies software.
 - *.idea/* folder, *Kotlin_EMA.iml*: IntelliJ IDEA project file and folder
 - *LICENSE.md*: License declaration file
 - *README.md*: readme file
+- *buid.xml*: ANT build file
 
-## Running the Project with IntelliJ IDEA
-1. Unzip or download the example project folder into a directory of your choice (example, D:\code\Kotlin_proj).
+## Buiild and run the Project with IntelliJ IDEA
+1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
 2. Copy all required EMA Java API libraries to the "libs" folder. The required libraries are following
     - ema.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs)
     - upa.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
@@ -51,7 +53,7 @@ This example requires the following dependencies software.
     - commons-logging-1.2.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
     - org.apache.commons.collections.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
     - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
-    - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
+    - slf4j-jdk14-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
 3. Open IntelliJ IDEA Java IDE, select **Create New Project**.
 
     ![intellij](./images/intelliJ_1.png "create new project")
@@ -72,21 +74,134 @@ This example requires the following dependencies software.
 
     ![intellij](./images/intelliJ_5.png "add EMA Java libraries")
 
-8. Open Kotlin_IProvider_200.kt file, right click and choose **Run** to start the Kotlin_IProvider_200 provider application.
+9. Click on the **Build** menu bar, then choose **Build Project** to build the project (You may choose **Rebuild Project** if you change any source code).
+
+    ![intellij](./images/intelliJ_12.png "build project")
+
+10. Open Kotlin_IProvider_200.kt file, right click and choose **Run** to start the Kotlin_IProvider_200 provider application.
 
     ![intellij](./images/intelliJ_6.png "Running Kotlin_IProvider_200")
 
-9. The Kotlin_IProvider_200 application will be started and waiting for a consumer application.
+11. The Kotlin_IProvider_200 application will be started and waiting for a consumer application.
 
     ![intellij](./images/intelliJ_7.png "Running Kotlin_IProvider_200 console")
 
-10. Open Kotlin_IProvider_100.kt file, right click and choose **Run** to start the Kotlin_Consumer_100 consumer application.
+12. Open Kotlin_Consumer_100.kt file, right click and choose **Run** to start the Kotlin_Consumer_100 consumer application.
 
     ![intellij](./images/intelliJ_8.png "Running Kotlin_Consumer_100")
 
-11. The Kotlin_Consumer_100 application will be started, then connects and consumes data from Kotlin_IProvider_200 application.
+13. The Kotlin_Consumer_100 application will be started, then connects and consumes data from Kotlin_IProvider_200 application.
 
     ![intellij](./images/intelliJ_9.png "Running Kotlin_Consumer_100 console")
+
+## Buiild and run the Project with ANT
+1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
+2. Download and install Kotlin command line compiler by follow the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html) into a directory of your choice (example, D:/Project/Compilers/kotlinc)
+3. Copy all required EMA Java API libraries to the "libs" folder. The required libraries are following
+    - ema.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs)
+    - upa.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
+    - upaValueAdd.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
+    - commons-configuration-1.10.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
+    - commons-lang-2.6.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
+    - commons-logging-1.2.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
+    - org.apache.commons.collections.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
+    - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
+    - slf4j-jdk14-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
+    - *kotlin-runtime.jar (For build and run with ANT only, &lt;Kotlin compiler install location&gt;/lib)*
+4. Install and configure [Apache ANT](http://ant.apache.org/) in your machine
+5. Edit the **kotlin.dir** line in *build.xml* file to be your Kotlin compiler install location (example, D:/Project/Compilers/kotlinc)
+    ```
+    <property name="kotlin.dir" value="{your Kotlin compiler folder}"/>
+    ```
+6. Run ```ant build``` command. All application class files will be available at *out* folder, the EmaConfig.xml and etc/ dictionary folder also copied to the out folder automatically.
+    ```
+    $>ant build  
+    ```
+7. Inside *out* folder, open command line and run the Kotlin_IProvider_200 application with the following command
+    ```
+    $> java -cp .;..\libs\kotlin-runtime.jar;..\libs\ema.jar;..\libs\upa.jar;..\libs\upaValueAdd.jar;..\libs\org.apache.commons.collections.jar;..\libs\commons-configuration-1.10.jar;..\libs\commons-lang-2.6.jar;..\libs\commons-logging-1.2.jar;..\libs\slf4j-api-1.7.12.jar;..\libs\slf4j-jdk14-1.7.12.jar; com.thomsonreuters.elektron.kotlin.Kotlin_IProvider_200Kt
+    ```
+8. Inside *out* folder, open command line and run run the Kotlin_IProvider_100 application with the following command
+    ```
+    $> java -cp .;..\libs\kotlin-runtime.jar;..\libs\ema.jar;..\libs\upa.jar;..\libs\upaValueAdd.jar;..\libs\org.apache.commons.collections.jar;..\libs\commons-configuration-1.10.jar;..\libs\commons-lang-2.6.jar;..\libs\commons-logging-1.2.jar;..\libs\slf4j-api-1.7.12.jar;..\libs\slf4j-jdk14-1.7.12.jar; com.thomsonreuters.elektron.kotlin.Kotlin_Consumer_100Kt
+    ```
+9. Example Kotlin_IProvider_200 application output
+    ```
+    Starting Kotlin_IProvider_200 application, waiting for a consumer application
+    Mar 14, 2018 6:03:58 PM com.thomsonreuters.ema.access.ServerChannelHandler react
+    orChannelEventCallback
+    INFO: loggerMsg
+       ClientName: ServerChannelHandler
+       Severity: Info
+        Text:    Received ChannelUp event on ClientHandle 1
+           Instance Name Provider_1_1
+           Component Version etaj3.1.1.E1.all.rrg|emaj3.1.0.E1.all.rrg
+    loggerMsgEnd
+
+
+    Receive Login Request message from rdc, send Login Refresh
+    Kotlin_IProvider_200: Receive Market Price Request message
+    Kotlin_IProvider_200: Send  Market Price Refresh message
+    Kotlin_IProvider_200: Send  Market Price Update messages
+    Kotlin_IProvider_200: Send  Market Price Update messages
+    ```
+10. Example Kotlin_Consumer_100 application output
+    ```
+	Starting Kotlin_Consumer_100 application
+	Mar 14, 2018 6:03:57 PM com.thomsonreuters.ema.access.ChannelCallbackClient reac
+	torChannelEventCallback
+	INFO: loggerMsg
+		ClientName: ChannelCallbackClient
+		Severity: Info
+		Text:    Received ChannelUp event on channel Channel_1
+			Instance Name Consumer_1_1
+			Component Version etaj3.1.1.E1.all.rrg|emaj3.1.0.E1.all.rrg
+	loggerMsgEnd
+
+
+	Kotlin_Consumer_100: Send item request message
+	Kotlin_Consumer_100: Receive Market Price Refresh message
+	RefreshMsg
+		streamId="5"
+		domain="MarketPrice Domain"
+		solicited
+		RefreshComplete
+		state="Open / Ok / None / 'Refresh Completed'"
+		itemGroup="00 00"
+		name="TRI.N"
+		serviceId="1"
+		serviceName="DIRECT_FEED"
+		Payload dataType="FieldList"
+			FieldList
+				FieldEntry fid="3" name="DSPLY_NAME" dataType="Rmtes" value="TRI.N"
+				FieldEntry fid="15" name="CURRENCY" dataType="Enum" value="840"
+				FieldEntry fid="21" name="HST_CLOSE" dataType="Real" value="39.0"
+				FieldEntry fid="22" name="BID" dataType="Real" value="39.9"
+				FieldEntry fid="25" name="ASK" dataType="Real" value="39.94"
+				FieldEntry fid="30" name="BIDSIZE" dataType="Real" value="9.0"
+				FieldEntry fid="31" name="ASKSIZE" dataType="Real" value="19.0"
+			FieldListEnd
+		PayloadEnd
+	RefreshMsgEnd
+
+	Kotlin_Consumer_100: Receive Market Price Update message
+	UpdateMsg
+		streamId="5"
+		domain="MarketPrice Domain"
+		updateTypeNum="0"
+		name="TRI.N"
+		serviceId="1"
+		serviceName="DIRECT_FEED"
+		Payload dataType="FieldList"
+			FieldList
+				FieldEntry fid="22" name="BID" dataType="Real" value="39.92"
+				FieldEntry fid="25" name="ASK" dataType="Real" value="39.95"
+				FieldEntry fid="30" name="BIDSIZE" dataType="Real" value="11.0"
+				FieldEntry fid="31" name="ASKSIZE" dataType="Real" value="20.0"
+			FieldListEnd
+		PayloadEnd
+	UpdateMsgEnd
+	```
 
 ## References
 For further details, please check out the following resources:
@@ -96,6 +211,7 @@ For further details, please check out the following resources:
 * Elektron Message API Java: [Quick Start](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/quick-start)
 * Developer Article: [10 important things you need to know before you write an Elektron Real Time application](https://developers.thomsonreuters.com/article/10-important-things-you-need-know-you-write-elektron-real-time-application)
 * [Kotlin programming language](https://kotlinlang.org/)
+* Kotlin: [Using Ant](https://kotlinlang.org/docs/reference/using-ant.html)
 
 For any question related to this article or Elektron WebSocket API page, please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com/).
 
