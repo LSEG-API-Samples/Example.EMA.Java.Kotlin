@@ -13,7 +13,7 @@ The consumer applications can consume data from Kotlin_IProvider_200 application
 
 ![connection diagram](./images/diagram.png "connection diagram")
 
-This example project is compatible with EMA Java 3.1.1 ([Elektron SDK 1.1.1](https://developers.thomsonreuters.com/elektron)) version.
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) 1.2.21/1.2.50 and [Elektron SDK - Java edition](https://developers.thomsonreuters.com/elektron) 1.1.1 and 1.2.0 versions.
 
 ## Kotlin Overview
 
@@ -40,11 +40,21 @@ This example requires the following dependencies software.
 - *.idea/* folder, *Kotlin_EMA.iml*: IntelliJ IDEA project file and folder
 - *LICENSE.md*: License declaration file
 - *README.md*: readme file
-- *buid.xml*: ANT build file
+- *buid.xml*: ANT build and run file
 
 ## Buiild and run the Project with IntelliJ IDEA
 1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
-2. Copy all required EMA Java API libraries to the "libs" folder. The required libraries are following
+2. If you are using Elektron SDK Java 1.2.0 (EMA Java 3.2.0), copy all required EMA Java 3.2.0 API libraries to the "libs" folder. The required libraries are following
+    - ema-3.2.0.1.jar (&lt;Elektron SDK Java 1.2 package&gt;/Java/Ema/Libs)
+    - upa-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+    - upaValueAdd-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+    - commons-configuration-1.10.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - commons-lang-2.6.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - commons-logging-1.2.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - commons-collections-3.2.2.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/SLF4J/slf4j-1.7.12)
+    - slf4j-jdk14-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/SLF4J/slf4j-1.7.12)
+3. If you are using Elektron SDK Java 1.1.1 (EMA Java 3.1.1), copy all required EMA Java 3.1.1 API libraries to the "libs" folder. The required libraries are following
     - ema.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs)
     - upa.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
     - upaValueAdd.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
@@ -54,23 +64,23 @@ This example requires the following dependencies software.
     - org.apache.commons.collections.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
     - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
     - slf4j-jdk14-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
-3. Open IntelliJ IDEA Java IDE, select **Create New Project**.
+4. Open IntelliJ IDEA Java IDE, select **Create New Project**.
 
     ![intellij](./images/intelliJ_1.png "create new project")
 
-4. Select **Kotlin/JVM** in the Addition Libraries and Frameworks window, then click Next button.
+5. Select **Kotlin/JVM** in the Addition Libraries and Frameworks window, then click Next button.
 
     ![intellij](./images/intelliJ_2.png "select Kotlin/JVM")
 
-5. Set **Project location** folder to the directory from step *1* .
+6. Set **Project location** folder to the directory from step *1* .
 
     ![intellij](./images/intelliJ_3.png "set project location")
 
-6. The example project and sub folders will be available in IntelliJ IDEA Java IDE.
+7. The example project and sub folders will be available in IntelliJ IDEA Java IDE.
 
     ![intellij](./images/intelliJ_4.png "IntelliJ IDEA Java IDE")
 
-7. Right click on *libs* folder, then choose **Addd as Library...**, then click Ok button to add EMA Java libraries to the project.
+8. Right click on *libs* folder, then choose **Addd as Library...**, then click Ok button to add EMA Java libraries to the project.
 
     ![intellij](./images/intelliJ_5.png "add EMA Java libraries")
 
@@ -97,7 +107,17 @@ This example requires the following dependencies software.
 ## Buiild and run the Project with ANT
 1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
 2. Download and install Kotlin command line compiler by follow the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html) into a directory of your choice (example, D:/Project/Compilers/kotlinc)
-3. Copy all required EMA Java API libraries to the "libs" folder. The required libraries are following
+2. If you are using Elektron SDK Java 1.2.0 (EMA Java 3.2.0), copy all required EMA Java 3.2.0 API libraries to the "libs" folder. The required libraries are following
+    - ema-3.2.0.1.jar (&lt;Elektron SDK Java 1.2 package&gt;/Java/Ema/Libs)
+    - upa-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+    - upaValueAdd-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+    - commons-configuration-1.10.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - commons-lang-2.6.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - commons-logging-1.2.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - commons-collections-3.2.2.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
+    - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/SLF4J/slf4j-1.7.12)
+    - slf4j-jdk14-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/SLF4J/slf4j-1.7.12)
+3. If you are using Elektron SDK Java 1.1.1 (EMA Java 3.1.1), copy all required EMA Java 3.1.1 API libraries to the "libs" folder. The required libraries are following
     - ema.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs)
     - upa.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
     - upaValueAdd.jar (&lt;Elektron SDK Java package&gt;/Eta/Libs)
@@ -107,25 +127,26 @@ This example requires the following dependencies software.
     - org.apache.commons.collections.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/apache)
     - slf4j-api-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
     - slf4j-jdk14-1.7.12.jar (&lt;Elektron SDK Java package&gt;/Ema/Libs/SLF4J/slf4j-1.7.12)
+4. Copy Kotlin runtime library file to the "libs" folder. 
     - *kotlin-runtime.jar (For build and run with ANT only, &lt;Kotlin compiler install location&gt;/lib)*
-4. Install and configure [Apache ANT](http://ant.apache.org/) in your machine
-5. Edit the **kotlin.dir** line in *build.xml* file to be your Kotlin compiler install location (example, D:/Project/Compilers/kotlinc)
+5. Install and configure [Apache ANT](http://ant.apache.org/) in your machine
+6. Edit the **kotlin.dir** line in *build.xml* file to be your Kotlin compiler install location (example, D:/Project/Compilers/kotlinc)
     ```
     <property name="kotlin.dir" value="{your Kotlin compiler folder}"/>
     ```
-6. Run ```ant build``` command. All application class files will be available at *out* folder, the EmaConfig.xml and etc/ dictionary folder also copied to the out folder automatically.
+7. Open project folder (example, D:/code/Kotlin_proj), then open command line and run ```ant build``` command. All application class files will be available at *out* folder, the EmaConfig.xml and etc/ dictionary folder also copied to the out folder automatically.
     ```
     $>ant build  
     ```
-7. Inside *out* folder, open command line and run the Kotlin_IProvider_200 application with the following command
+8. Inside project folder, open command line and run the Kotlin_IProvider_200 application with the following ant command
     ```
-    $> java -cp .;..\libs\kotlin-runtime.jar;..\libs\ema.jar;..\libs\upa.jar;..\libs\upaValueAdd.jar;..\libs\org.apache.commons.collections.jar;..\libs\commons-configuration-1.10.jar;..\libs\commons-lang-2.6.jar;..\libs\commons-logging-1.2.jar;..\libs\slf4j-api-1.7.12.jar;..\libs\slf4j-jdk14-1.7.12.jar; com.thomsonreuters.elektron.kotlin.Kotlin_IProvider_200Kt
+    $> ant run run_Kotlin_IProvider_200Kt
     ```
-8. Inside *out* folder, open command line and run run the Kotlin_IProvider_100 application with the following command
+9. Inside project folder, open command line and run run the Kotlin_IProvider_100 application with the following ant command
     ```
-    $> java -cp .;..\libs\kotlin-runtime.jar;..\libs\ema.jar;..\libs\upa.jar;..\libs\upaValueAdd.jar;..\libs\org.apache.commons.collections.jar;..\libs\commons-configuration-1.10.jar;..\libs\commons-lang-2.6.jar;..\libs\commons-logging-1.2.jar;..\libs\slf4j-api-1.7.12.jar;..\libs\slf4j-jdk14-1.7.12.jar; com.thomsonreuters.elektron.kotlin.Kotlin_Consumer_100Kt
+    $> ant run_Kotlin_Consumer_100Kt
     ```
-9. Example Kotlin_IProvider_200 application output
+10. Example Kotlin_IProvider_200 application output
     ```
     Starting Kotlin_IProvider_200 application, waiting for a consumer application
     Mar 14, 2018 6:03:58 PM com.thomsonreuters.ema.access.ServerChannelHandler react
@@ -145,7 +166,7 @@ This example requires the following dependencies software.
     Kotlin_IProvider_200: Send  Market Price Update messages
     Kotlin_IProvider_200: Send  Market Price Update messages
     ```
-10. Example Kotlin_Consumer_100 application output
+11. Example Kotlin_Consumer_100 application output
     ```
 	Starting Kotlin_Consumer_100 application
 	Mar 14, 2018 6:03:57 PM com.thomsonreuters.ema.access.ChannelCallbackClient reac
@@ -202,6 +223,11 @@ This example requires the following dependencies software.
 		PayloadEnd
 	UpdateMsgEnd
 	```
+12. You can also run Kotlin_Consumer_220 application via the following ant command
+    ```
+    $> ant run_Kotlin_Consumer_220Kt
+    ```
+
 
 ## References
 For further details, please check out the following resources:
