@@ -16,7 +16,11 @@
 	<typedef resource="org/jetbrains/kotlin/ant/antlib.xml" classpath="${kotlin.lib}/kotlin-ant.jar"/>
 
     <path id="ema.classpath">
-        <pathelement path="${libs.dir}/ema.jar"/>
+        <!--pathelement path="${libs.dir}/ema.jar"/>-->
+        <pathelement path="${libs.dir}"/>
+        <fileset dir="libs">
+            <include name="**/*.jar"/>
+        </fileset>
     </path>
 
     <target name="clean">
@@ -52,4 +56,30 @@
 
     <target depends="clean,build-ema-kotlin" name="build"/>
 
+    <target name="run_Kotlin_IProvider_200Kt">
+        <java classname="com.thomsonreuters.elektron.kotlin.Kotlin_IProvider_200Kt">
+            <classpath>
+                <pathelement location="${dist.dir.output}" />
+                <path refid="ema.classpath" />
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_Kotlin_Consumer_100Kt">
+        <java classname="com.thomsonreuters.elektron.kotlin.Kotlin_Consumer_100Kt">
+            <classpath>
+                <pathelement location="${dist.dir.output}" />
+                <path refid="ema.classpath" />
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_Kotlin_Consumer_220Kt">
+        <java classname="com.thomsonreuters.elektron.kotlin.Kotlin_Consumer_220Kt">
+            <classpath>
+                <pathelement location="${dist.dir.output}" />
+                <path refid="ema.classpath" />
+            </classpath>
+        </java>
+    </target>
 </project>
