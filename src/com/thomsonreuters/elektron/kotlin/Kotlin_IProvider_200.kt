@@ -115,13 +115,14 @@ fun main(args: Array<String>){
         val fieldList: FieldList = EmaFactory.createFieldList()
         val updateMsg: UpdateMsg = EmaFactory.createUpdateMsg()
 
-        provider = EmaFactory.createOmmProvider(EmaFactory.createOmmIProviderConfig().operationModel(OmmIProviderConfig.OperationModel.USER_DISPATCH), appCient)
+
+        //provider = EmaFactory.createOmmProvider(EmaFactory.createOmmIProviderConfig().operationModel(OmmIProviderConfig.OperationModel.USER_DISPATCH), appCient)
+        provider = EmaFactory.createOmmProvider(EmaFactory.createOmmIProviderConfig().providerName("Provider_1").operationModel(OmmIProviderConfig.OperationModel.USER_DISPATCH), appCient)
 
         while(appCient.itemHandle.toInt() == 0){
             provider.dispatch(1000L)
             Thread.sleep(1000L)
         }
-
 
         for(index in 1..59){
             val startTime: Long = System.currentTimeMillis()

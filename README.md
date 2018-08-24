@@ -5,15 +5,15 @@
 This example project shows how to implement the [Elektron Message API Java (EMA Java)](https://developers.thomsonreuters.com/elektron/elektron-sdk-java) applications with Kotlin lanuage. The console applications source code are implemented in Kotlin programming language. All source code will be compiled to Java classes which compatible with Java virtual machine. The applications will run with these Java classes files. 
 
 The example project contains one interactive-Provider application and two consumer applications. 
-- The Kotlin_IProvider_200 shows how to implement a basic RSSL Provider application. 
-- The Kotlin_Consumer_100 shows how to implement a basic RSSL consumer application.
-- The Kotlin_Consumer_220 shows how to implement an advance RSSL consumer application. 
+- The Kotlin_IProvider_200 shows how to implement a basic RSSL Interactive Provider application. 
+- The Kotlin_Consumer_100 shows how to implement a basic RSSL Consumer application.
+- The Kotlin_Consumer_220 shows how to implement an advance RSSL Consumer application. 
 
 The consumer applications can consume data from Kotlin_IProvider_200 application or other Elektron data sources (ADS server, etc)
 
 ![connection diagram](./images/diagram.png "connection diagram")
 
-This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) 1.2.21/1.2.50 and [Elektron SDK - Java edition](https://developers.thomsonreuters.com/elektron) 1.1.1 and 1.2.0 versions.
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) 1.2.50 and [Elektron SDK - Java edition](https://developers.thomsonreuters.com/elektron) 1.1.1 and 1.2.x versions.
 
 ## Kotlin Overview
 
@@ -33,7 +33,7 @@ This example requires the following dependencies software.
 - *src/* folder: Applications source code folder
 - *Kotlin_Consumer_100.kt*: A basic consumer application source code 
 - *Kotlin_Consumer_220.kt*: Consumer application source code that show how to handle incoming data
-- *Kotlin_IProvider_200.kt*: Interactive-Provider application source code
+- *Kotlin_IProvider_200.kt*: Interactive Provider application source code
 - *libs/* folder: Elektron SDK libraries files folder
 - *etc/* folder: Eltrkon Data Dictionary files folder (RDMFieldDictionary and enumtype.def files)
 - *EmaConfig.xml*: Elektron SDK Java Configuration file
@@ -44,10 +44,10 @@ This example requires the following dependencies software.
 
 ## Buiild and run the Project with IntelliJ IDEA
 1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
-2. If you are using Elektron SDK Java 1.2.0 (EMA Java 3.2.0), copy all required EMA Java 3.2.0 API libraries to the "libs" folder. The required libraries are following
-    - ema-3.2.0.1.jar (&lt;Elektron SDK Java 1.2 package&gt;/Java/Ema/Libs)
-    - upa-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
-    - upaValueAdd-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+2. If you are using Elektron SDK Java 1.2.x (EMA Java 3.2.x), copy all required EMA Java 3.2.x API libraries to the "libs" folder. The required libraries are following
+    - ema-3.2.x.x.jar (&lt;Elektron SDK Java 1.2 package&gt;/Java/Ema/Libs)
+    - upa-3.2.x.x.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+    - upaValueAdd-3.2.x.x.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
     - commons-configuration-1.10.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
     - commons-lang-2.6.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
     - commons-logging-1.2.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
@@ -107,10 +107,10 @@ This example requires the following dependencies software.
 ## Buiild and run the Project with ANT
 1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
 2. Download and install Kotlin command line compiler by follow the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html) into a directory of your choice (example, D:/Project/Compilers/kotlinc)
-2. If you are using Elektron SDK Java 1.2.0 (EMA Java 3.2.0), copy all required EMA Java 3.2.0 API libraries to the "libs" folder. The required libraries are following
-    - ema-3.2.0.1.jar (&lt;Elektron SDK Java 1.2 package&gt;/Java/Ema/Libs)
-    - upa-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
-    - upaValueAdd-3.2.0.1.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+2. If you are using Elektron SDK Java 1.2.x (EMA Java 3.2.x), copy all required EMA Java 3.2.x API libraries to the "libs" folder. The required libraries are following
+    - ema-3.2.x.x.jar (&lt;Elektron SDK Java 1.2 package&gt;/Java/Ema/Libs)
+    - upa-3.2.x.x.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
+    - upaValueAdd-3.2.x.x.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
     - commons-configuration-1.10.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
     - commons-lang-2.6.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)
     - commons-logging-1.2.jar (&lt;Elektron SDK Java package&gt;/Elektron-SDK-BinaryPack/Java/Ema/Libs/apache)

@@ -95,7 +95,7 @@ fun main(args: Array<String>) {
         consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().consumerName("Consumer_1"))
         //reqMsg = EmaFactory.createReqMsg();
         println("Kotlin_Consumer_220: Send item request message")
-        consumer.registerClient(EmaFactory.createReqMsg().serviceName("DIRECT_FEED").name("TRI.N"), appClient)
+        consumer.registerClient(EmaFactory.createReqMsg().serviceName("DIRECT_FEED").name("EUR="), appClient)
 
         Thread.sleep(60000)
 
