@@ -18,15 +18,18 @@ import com.thomsonreuters.ema.access.StatusMsg
 import com.thomsonreuters.ema.access.UpdateMsg
 import com.thomsonreuters.ema.rdm.EmaRdm
 
+//Client class, implements OmmProviderClient interface
 class IProviderAppClient : OmmProviderClient {
 
-    var itemHandle: Long = 0L
+    var itemHandle: Long = 0L // Initial item Handle
+
     override fun onReqMsg(reqMsg: ReqMsg, providerEvent: OmmProviderEvent) {
+        //Verify incoming message type
         when (reqMsg.domainType()) {
-            EmaRdm.MMT_LOGIN -> processLoginRequest(reqMsg,providerEvent)
-            EmaRdm.MMT_MARKET_PRICE -> processMarketPriceRequest(reqMsg,providerEvent)
+            EmaRdm.MMT_LOGIN -> processLoginRequest(reqMsg, providerEvent)
+            EmaRdm.MMT_MARKET_PRICE -> processMarketPriceRequest(reqMsg, providerEvent)
             else -> {
-                processInvalidItemRequest(reqMsg,providerEvent)
+                processInvalidItemRequest(reqMsg, providerEvent)
             }
         }
     }
@@ -48,7 +51,7 @@ class IProviderAppClient : OmmProviderClient {
     fun processLoginRequest(reqMsg: ReqMsg, event: OmmProviderEvent) {
 
         println("Receive Login Request message from ${reqMsg.name()}, send Login Refresh")
-
+        //Send Login REFESH_RESP message to consumer
         event.provider().submit(
                 EmaFactory.createRefreshMsg()
                         .domainType(EmaRdm.MMT_LOGIN)
@@ -61,32 +64,32 @@ class IProviderAppClient : OmmProviderClient {
                 , event.handle())
     }
 
-    private fun processMarketPriceRequest(reqMsg: ReqMsg,event: OmmProviderEvent){
+    private fun processMarketPriceRequest(reqMsg: ReqMsg, event: OmmProviderEvent) {
 
         println("Kotlin_IProvider_200: Receive Market Price Request message")
 
-        if(itemHandle.toInt() != 0){ //if (itemHandle == 0 || itemHandle != event.handle())
-            processInvalidItemRequest(reqMsg,event)
+        if (itemHandle.toInt() != 0) { //if (itemHandle == 0 || itemHandle != event.handle())
+            processInvalidItemRequest(reqMsg, event)
             return
         }
 
         //Creates Market Price Payload and Send Refresh Message
-        val fieldList:FieldList = EmaFactory.createFieldList()
+        val fieldList: FieldList = EmaFactory.createFieldList()
 
         fieldList.add(EmaFactory.createFieldEntry().ascii(3, reqMsg.name()))
         fieldList.add(EmaFactory.createFieldEntry().enumValue(15, 840))
         fieldList.add(EmaFactory.createFieldEntry().real(21, 3900, OmmReal.MagnitudeType.EXPONENT_NEG_2))
         fieldList.add(EmaFactory.createFieldEntry().real(22, 3990, OmmReal.MagnitudeType.EXPONENT_NEG_2))
         fieldList.add(EmaFactory.createFieldEntry().real(25, 3994, OmmReal.MagnitudeType.EXPONENT_NEG_2))
-        fieldList.add(EmaFactory.createFieldEntry().real(30, 9 , OmmReal.MagnitudeType.EXPONENT_0))
-        fieldList.add(EmaFactory.createFieldEntry().real(31, 19 , OmmReal.MagnitudeType.EXPONENT_0))
+        fieldList.add(EmaFactory.createFieldEntry().real(30, 9, OmmReal.MagnitudeType.EXPONENT_0))
+        fieldList.add(EmaFactory.createFieldEntry().real(31, 19, OmmReal.MagnitudeType.EXPONENT_0))
 
         println("Kotlin_IProvider_200: Send  Market Price Refresh message")
         event.provider().submit(
                 EmaFactory.createRefreshMsg()
                         .serviceName(reqMsg.serviceName())
                         .name(reqMsg.name())
-                        .state(OmmState.StreamState.OPEN, OmmState.DataState.OK, OmmState.StatusCode.NONE , "Refresh Completed")
+                        .state(OmmState.StreamState.OPEN, OmmState.DataState.OK, OmmState.StatusCode.NONE, "Refresh Completed")
                         .solicited(true)
                         .payload(fieldList)
                         .complete(true)
@@ -95,7 +98,7 @@ class IProviderAppClient : OmmProviderClient {
         itemHandle = event.handle()
     }
 
-    private fun processInvalidItemRequest(reqMsg: ReqMsg, event: OmmProviderEvent){
+    private fun processInvalidItemRequest(reqMsg: ReqMsg, event: OmmProviderEvent) {
         event.provider().submit(
                 EmaFactory.createStatusMsg()
                         .name(reqMsg.name())
@@ -106,10 +109,10 @@ class IProviderAppClient : OmmProviderClient {
     }
 }
 
-fun main(args: Array<String>){
+fun main(args: Array<String>) {
     lateinit var provider: OmmProvider
     val appCient = IProviderAppClient()
-    try{
+    try {
 
         println("Starting Kotlin_IProvider_200 application, waiting for a consumer application")
 
@@ -120,12 +123,12 @@ fun main(args: Array<String>){
         //OMMProvider creation and establish sersver port.
         provider = EmaFactory.createOmmProvider(EmaFactory.createOmmIProviderConfig().providerName("Provider_1").operationModel(OmmIProviderConfig.OperationModel.USER_DISPATCH), appCient)
 
-        while(appCient.itemHandle.toInt() == 0){
+        while (appCient.itemHandle.toInt() == 0) {
             provider.dispatch(1000L)
             Thread.sleep(1000L)
         }
 
-        for(index in 1..59){
+        for (index in 1..59) {
             val startTime: Long = System.currentTimeMillis()
 
             provider.dispatch(1000L)
@@ -138,12 +141,13 @@ fun main(args: Array<String>){
 
             provider.submit(updateMsg.clear().payload(fieldList), appCient.itemHandle)
             println("Kotlin_IProvider_200: Send  Market Price Update messages")
-            while(System.currentTimeMillis() - startTime < 1000){} //Keeps sending Update Messages
+            while (System.currentTimeMillis() - startTime < 1000) {
+            } //Keeps sending Update Messages
         }
 
-    } catch (excp:OmmException ){
+    } catch (excp: OmmException) {
         println(excp.message)
-    } catch (excp:InterruptedException ){
+    } catch (excp: InterruptedException) {
         println(excp.message)
     } finally {
         /*provider?.let {

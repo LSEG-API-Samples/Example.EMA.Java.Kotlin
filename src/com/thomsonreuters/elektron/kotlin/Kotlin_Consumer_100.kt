@@ -14,7 +14,9 @@ import com.thomsonreuters.ema.access.OmmConsumerConfig
 import com.thomsonreuters.ema.access.OmmConsumerEvent
 import com.thomsonreuters.ema.access.OmmException
 
+//Client class, implements OmmConsumerClient interface
 class Appclient : OmmConsumerClient {
+
     override fun onRefreshMsg(refreshMsg: RefreshMsg, event: OmmConsumerEvent) {
         println("Kotlin_Consumer_100: Receive Market Price Refresh message")
         println(refreshMsg)
@@ -51,13 +53,17 @@ fun main(args: Array<String>) {
     try {
         println("Starting Kotlin_Consumer_100 application")
 
+        //OmmConsumerConfig creation
         config = EmaFactory.createOmmConsumerConfig()
-        consumer = EmaFactory.createOmmConsumer((config.host("localhost:14002").username("rdc")))
 
-        reqMsg = EmaFactory.createReqMsg();
+        //OmmConsumer creation and establish communication.
+        consumer = EmaFactory.createOmmConsumer((config.host("localhost:14002").username("kotlin")))
+
+        //ReqMsg creation
+        reqMsg = EmaFactory.createReqMsg()
 
         println("Kotlin_Consumer_100: Send item request message")
-        consumer.registerClient(reqMsg.serviceName("DIRECT_FEED").name("EUR="), appClient)
+        consumer.registerClient(reqMsg.serviceName("DIRECT_FEED").name("EUR="), appClient) //Subscribe for EUR= RIC from DIRECT_FEED service
 
         Thread.sleep(60000)
 

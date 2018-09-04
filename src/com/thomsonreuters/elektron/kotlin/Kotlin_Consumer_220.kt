@@ -18,7 +18,9 @@ import com.thomsonreuters.ema.access.OmmConsumerClient
 import com.thomsonreuters.ema.access.OmmConsumerEvent
 import com.thomsonreuters.ema.access.OmmException
 
+//Client class, implements OmmConsumerClient interface
 class AppclientFieldListWalk : OmmConsumerClient {
+
     override fun onRefreshMsg(refreshMsg: RefreshMsg, event: OmmConsumerEvent): Unit {
 
         if (refreshMsg.hasName()) println("Refresh: Item Name: ${refreshMsg.name()}")
@@ -58,6 +60,7 @@ class AppclientFieldListWalk : OmmConsumerClient {
 
     override fun onAllMsg(msg: Msg, event: OmmConsumerEvent): Unit {}
 
+    //Iterates OMM FieldList, then parse each OMM FieldEntry based on FID type
     fun decode(fieldList: FieldList): Unit {
         for (fieldEntry: FieldEntry in fieldList) {
             print("Fid: ${fieldEntry.fieldId()} Name = ${fieldEntry.name()} DataType: ${DataType.asString(fieldEntry.load().dataType())} Value: ")
@@ -90,12 +93,11 @@ fun main(args: Array<String>) {
     try {
         println("Starting Kotlin_Consumer_220 application")
 
-        //config = EmaFactory.createOmmConsumerConfig()
-        //consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().host("localhost:14002").username("kotlin"))
+        //OmmConsumer, OmmConsumerConfig creation and establish communication.
         consumer = EmaFactory.createOmmConsumer(EmaFactory.createOmmConsumerConfig().consumerName("Consumer_1"))
-        //reqMsg = EmaFactory.createReqMsg();
+
         println("Kotlin_Consumer_220: Send item request message")
-        consumer.registerClient(EmaFactory.createReqMsg().serviceName("DIRECT_FEED").name("EUR="), appClient)
+        consumer.registerClient(EmaFactory.createReqMsg().serviceName("DIRECT_FEED").name("EUR="), appClient) //Subscribe for EUR= RIC from DIRECT_FEED service
 
         Thread.sleep(60000)
 

@@ -4,16 +4,16 @@
 
 This example project shows how to implement the [Elektron Message API Java (EMA Java)](https://developers.thomsonreuters.com/elektron/elektron-sdk-java) applications with Kotlin lanuage. The console applications source code are implemented in Kotlin programming language. All source code will be compiled to Java classes which compatible with Java virtual machine. The applications will run with these Java classes files. 
 
-The example project contains one interactive-Provider application and two consumer applications. 
+The example project contains one Interactive-Provider application and two Consumer applications.  
 - The Kotlin_IProvider_200 shows how to implement a basic RSSL Interactive Provider application. 
 - The Kotlin_Consumer_100 shows how to implement a basic RSSL Consumer application.
-- The Kotlin_Consumer_220 shows how to implement an advance RSSL Consumer application. 
+- The Kotlin_Consumer_220 shows how to implement a RSSL Consumer application that handles incoming data for each FID type.
 
 The consumer applications can consume data from Kotlin_IProvider_200 application or other Elektron data sources (ADS server, etc)
 
 ![connection diagram](./images/diagram.png "connection diagram")
 
-This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) 1.2.50 and [Elektron SDK - Java edition](https://developers.thomsonreuters.com/elektron) 1.1.1 and 1.2.x versions.
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) 1.2.50++, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017/2018 and [Elektron SDK - Java edition](https://developers.thomsonreuters.com/elektron) 1.1.1 and 1.2.x versions.
 
 ## Kotlin Overview
 
@@ -27,7 +27,7 @@ This example requires the following dependencies software.
 2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017 and above. You can download Intelli IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
 3. If you prefer to use Kotlin [command line compiler](https://github.com/JetBrains/kotlin/releases/latest), you can manual download and install it by follow the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html).
 4. If you prefer to use Kotlin command line compiler, [Apache ANT](http://ant.apache.org/) version 1.8.2 and above is required.
-4. [Elektron SDK Java Edition](https://developers.thomsonreuters.com/elektron/elektron-sdk-java). You can download the SDK package via this [link](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/downloads) or via [GitHub](https://github.com/thomsonreuters/Elektron-SDK) page.
+5. [Elektron SDK Java Edition](https://developers.thomsonreuters.com/elektron/elektron-sdk-java). You can download the SDK package via this [link](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/downloads) or via [GitHub](https://github.com/thomsonreuters/Elektron-SDK) page.
 
 ## Project Files Structure
 - *src/* folder: Applications source code folder
@@ -96,13 +96,13 @@ This example requires the following dependencies software.
 
     ![intellij](./images/intelliJ_7.png "Running Kotlin_IProvider_200 console")
 
-12. Open Kotlin_Consumer_100.kt file, right click and choose **Run** to start the Kotlin_Consumer_100 consumer application.
+12. Open Kotlin_Consumer_220.kt file, right click and choose **Run** to start the Kotlin_Consumer_220 consumer application.
 
-    ![intellij](./images/intelliJ_8.png "Running Kotlin_Consumer_100")
+    ![intellij](./images/intelliJ_13.png "Running Kotlin_Consumer_220")
 
 13. The Kotlin_Consumer_100 application will be started, then connects and consumes data from Kotlin_IProvider_200 application.
 
-    ![intellij](./images/intelliJ_9.png "Running Kotlin_Consumer_100 console")
+    ![intellij](./images/intelliJ_14.png "Running Kotlin_Consumer_220 console")
 
 ## Buiild and run the Project with ANT
 1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
@@ -231,13 +231,11 @@ This example requires the following dependencies software.
 
 ## References
 For further details, please check out the following resources:
-* [Elektron SDK Family site](https://developers.thomsonreuters.com/elektron)
 * [Elektron Java API page](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/) on the [Thomson Reuters Developer Community](https://developers.thomsonreuters.com/) web site.
-* Developer Webinar: [Introduction to Enterprise App Creation With Open-Source Elektron Message API](https://www.youtube.com/watch?v=2pyhYmgHxlU)
-* Elektron Message API Java: [Quick Start](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/quick-start)
-* Developer Article: [10 important things you need to know before you write an Elektron Real Time application](https://developers.thomsonreuters.com/article/10-important-things-you-need-know-you-write-elektron-real-time-application)
-* [Kotlin programming language](https://kotlinlang.org/)
-* Kotlin: [Using Ant](https://kotlinlang.org/docs/reference/using-ant.html)
+* [Kotlin programming language: Reference](https://kotlinlang.org/docs/reference/) page.
+* [Kotlin programming language: Tutorials](https://kotlinlang.org/docs/tutorials/) page.
+* [Elektron Message API Java Quick Start](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/quick-start)
+* [Developer Webinar: Introduction to Enterprise App Creation With Open-Source Elektron Message API](https://www.youtube.com/watch?v=2pyhYmgHxlU)
 
-For any question related to this article or Elektron WebSocket API page, please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com/).
+For any question related to this article or Elektron Message API page, please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com/).
 
