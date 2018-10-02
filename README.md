@@ -2,22 +2,24 @@
 
 ## Overview
 
-This example project shows how to implement the [Elektron Message API Java (EMA Java)](https://developers.thomsonreuters.com/elektron/elektron-sdk-java) applications with Kotlin lanuage. The console applications source code are implemented in Kotlin programming language. All source code will be compiled to Java classes which compatible with Java virtual machine. The applications will run with these Java classes files. 
+This example project shows how to implement the [Elektron Message API Java (EMA Java)](https://developers.thomsonreuters.com/elektron/elektron-sdk-java) OMM Consumer and OMM Provider applications applications with Kotlin lanuage. The application source codes are implemented in Kotlin language with EMA Java library. All source code will be compiled to Java Virtual Machine (JVM) compatible Java classes and run in a console.  
 
-The example project contains one Interactive-Provider application and two Consumer applications.  
+The example project contains one Interactive-Provider application and two Consumer applications. 
 - The Kotlin_IProvider_200 shows how to implement a basic RSSL Interactive Provider application. 
 - The Kotlin_Consumer_100 shows how to implement a basic RSSL Consumer application.
 - The Kotlin_Consumer_220 shows how to implement a RSSL Consumer application that handles incoming data for each FID type.
 
-The consumer applications can consume data from Kotlin_IProvider_200 application or other Elektron data sources (ADS server, etc)
+The consumer applications can consume data from Kotlin_IProvider_200 application or other Elektron data sources (ADS server, [Elektron Test Data](https://developers.thomsonreuters.com/pages/elektron-test-data-1), etc).
 
 ![connection diagram](./images/diagram.png "connection diagram")
 
-This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) 1.2.50++, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017/2018 and [Elektron SDK - Java edition](https://developers.thomsonreuters.com/elektron) 1.1.1 and 1.2.x versions.
+You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Elektron SDK - Java: Documentation page](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/docs).
+
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.2.50 and above, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2017/2018 and [Elektron SDK - Java edition](https://developers.thomsonreuters.com/elektron) 1.1.1/1.2.x versions.
 
 ## Kotlin Overview
 
-[Kotlin](https://kotlinlang.org/) is a statically-typed programming language developed by [Jetbrains](https://www.jetbrains.com/) that runs on the Java virtual machine. Kotlin is interoperate with Java code and is reliant on Java code from the existing Java Class Library/Framework. Kotlin syntax aims for reducing Java language verbosity and complexity. Kotlin is a first-class programming language on Android OS. 
+[Kotlin](https://kotlinlang.org/) is a statically-typed programming language developed by [Jetbrains](https://www.jetbrains.com/) that runs on the Java virtual machine. Kotlin is a first-class programming language on Android OS. Kotlin interoperates with Java code and is reliant on Java code from the existing Java Class Library/Framework. Kotlin syntax aims for reducing Java language verbosity and complexity. The language is also designed with Java Interoperability in mind. Existing Java code (and EMA Java libraries) can be called from Kotlin in a natural way. 
 
 Although Kotlin source code can also be compiled to JavaScript and Native code, this example project focus only the JVM target environment.
 
@@ -25,7 +27,7 @@ Although Kotlin source code can also be compiled to JavaScript and Native code, 
 This example requires the following dependencies software.
 1. Java 8 SDK
 2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017 and above. You can download Intelli IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
-3. If you prefer to use Kotlin [command line compiler](https://github.com/JetBrains/kotlin/releases/latest), you can manual download and install it by follow the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html).
+3. If you prefer to use Kotlin [command line compiler](https://github.com/JetBrains/kotlin/releases/latest), you can manual download and install it by following an instruction in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html).
 4. If you prefer to use Kotlin command line compiler, [Apache ANT](http://ant.apache.org/) version 1.8.2 and above is required.
 5. [Elektron SDK Java Edition](https://developers.thomsonreuters.com/elektron/elektron-sdk-java). You can download the SDK package via this [link](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/downloads) or via [GitHub](https://github.com/thomsonreuters/Elektron-SDK) page.
 
@@ -35,7 +37,7 @@ This example requires the following dependencies software.
 - *Kotlin_Consumer_220.kt*: Consumer application source code that show how to handle incoming data
 - *Kotlin_IProvider_200.kt*: Interactive Provider application source code
 - *libs/* folder: Elektron SDK libraries files folder
-- *etc/* folder: Eltrkon Data Dictionary files folder (RDMFieldDictionary and enumtype.def files)
+- *etc/* folder: Elektron Data Dictionary files folder (RDMFieldDictionary and enumtype.def files)
 - *EmaConfig.xml*: Elektron SDK Java Configuration file
 - *.idea/* folder, *Kotlin_EMA.iml*: IntelliJ IDEA project file and folder
 - *LICENSE.md*: License declaration file
@@ -68,7 +70,7 @@ This example requires the following dependencies software.
 
     ![intellij](./images/intelliJ_1.png "create new project")
 
-5. Select **Kotlin/JVM** in the Addition Libraries and Frameworks window, then click Next button.
+5. Select **Kotlin/JVM** in the Addition Libraries and Frameworks window, then click the Next button.
 
     ![intellij](./images/intelliJ_2.png "select Kotlin/JVM")
 
@@ -80,7 +82,7 @@ This example requires the following dependencies software.
 
     ![intellij](./images/intelliJ_4.png "IntelliJ IDEA Java IDE")
 
-8. Right click on *libs* folder, then choose **Addd as Library...**, then click Ok button to add EMA Java libraries to the project.
+8. Right click on *libs* folder, then choose **Add as Library...**, then click Ok button to add EMA Java libraries to the project.
 
     ![intellij](./images/intelliJ_5.png "add EMA Java libraries")
 
@@ -106,7 +108,7 @@ This example requires the following dependencies software.
 
 ## Buiild and run the Project with ANT
 1. Unzip or download the example project folder into a directory of your choice (example, D:/code/Kotlin_proj).
-2. Download and install Kotlin command line compiler by follow the guide in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html) into a directory of your choice (example, D:/Project/Compilers/kotlinc)
+2. Download and install Kotlin command line compiler by follow an instruction in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html) into a directory of your choice (example, D:/Project/Compilers/kotlinc)
 2. If you are using Elektron SDK Java 1.2.x (EMA Java 3.2.x), copy all required EMA Java 3.2.x API libraries to the "libs" folder. The required libraries are following
     - ema-3.2.x.x.jar (&lt;Elektron SDK Java 1.2 package&gt;/Java/Ema/Libs)
     - upa-3.2.x.x.jar (&lt;Elektron SDK Java package&gt;/Java/Eta/Libs)
@@ -228,7 +230,6 @@ This example requires the following dependencies software.
     $> ant run_Kotlin_Consumer_220Kt
     ```
 
-
 ## References
 For further details, please check out the following resources:
 * [Elektron Java API page](https://developers.thomsonreuters.com/elektron/elektron-sdk-java/) on the [Thomson Reuters Developer Community](https://developers.thomsonreuters.com/) web site.
@@ -238,4 +239,3 @@ For further details, please check out the following resources:
 * [Developer Webinar: Introduction to Enterprise App Creation With Open-Source Elektron Message API](https://www.youtube.com/watch?v=2pyhYmgHxlU)
 
 For any question related to this article or Elektron Message API page, please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com/).
-
