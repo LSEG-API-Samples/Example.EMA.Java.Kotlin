@@ -8,8 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-    <orderEntry type="library" name="libs" level="project" />
-    <orderEntry type="library" name="libs (2)" level="project" />
-    <orderEntry type="library" name="libs (3)" level="project" />
+    <orderEntry type="library" name="com.thomsonreuters.ema:ema:3.3.0.1" level="project" />
   </component>
 </module>
