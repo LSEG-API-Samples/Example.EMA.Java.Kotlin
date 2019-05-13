@@ -72,7 +72,7 @@ This example requires the following dependencies software.
 
     ![intellij](./images/mavencentral/intelliJ_16_blue.png "Setup Project Library")
 
-8. Input ```com.thomsonreuters.ema:ema:3.3.0.1``` for EMA Java 3.3.0L1 (ESDK Java 1.3.0) library from the Maven Central repository. Set IntelliJ to download all libraries to *D:/code/Kotlin_proj\libs* folder location.
+8. For this development purpose, input ```com.thomsonreuters.ema:ema:3.3.0.1``` for EMA Java 3.3.0 G1 which is the latest Development version from the Maven Central repository. Then set IntelliJ to download all required libraries to *D:\code\Kotlin_proj\libs* folder location. For production purpose, I recommend ```com.thomsonreuters.ema:ema:3.3.0.0``` for EMA Java 3.3.0 L1 which is an official stable version.
 
     ![intellij](./images/mavencentral/intelliJ_17_blue.png "add EMA Java libraries from Maven Central")
 
