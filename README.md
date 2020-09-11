@@ -2,32 +2,35 @@
 
 ## Overview
 
-This example project shows how to implement the [Elektron Message API Java (EMA Java)](https://developers.refinitiv.com/elektron/elektron-sdk-java) OMM Consumer and OMM Provider applications applications with Kotlin lanuage. The application source codes are implemented in Kotlin language with EMA Java library. All source code will be compiled to Java Virtual Machine (JVM) compatible Java classes and run in a console.  
+This example project shows how to implement the [Enterprise Message API Java (EMA Java)](https://developers.refinitiv.com/elektron/elektron-sdk-java) (formerly known as Elektron Message API) OMM Consumer and OMM Provider applications applications with Kotlin language. The application source codes are implemented in Kotlin language with EMA Java library. All source code will be compiled to Java Virtual Machine (JVM) compatible Java classes and run in a console.  
 
 The example project contains one Interactive-Provider application and two Consumer applications. 
 - The Kotlin_IProvider_200 shows how to implement a basic RSSL Interactive Provider application. 
 - The Kotlin_Consumer_100 shows how to implement a basic RSSL Consumer application.
 - The Kotlin_Consumer_220 shows how to implement a RSSL Consumer application that handles incoming data for each FID type.
 
-The consumer applications can consume data from Kotlin_IProvider_200 application or other Elektron data sources (ADS server, [Elektron Test Data](https://developers.refinitiv.com/pages/elektron-test-data-1), etc).
+The consumer applications can consume data from Kotlin_IProvider_200 application or other Refinitiv Real-Time data sources (ADS server, [Refinitiv Real-Time Test Data](https://developers.refinitiv.com/pages/elektron-test-data-1), etc).
 
 ![connection diagram](./images/diagram.png "connection diagram")
 
-You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Elektron SDK - Java: Documentation page](https://developers.refinitiv.com/elektron/elektron-sdk-java/docs).
+You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Refinitiv Real-Time SDK - Java: Documentation page](https://developers.refinitiv.com/elektron/elektron-sdk-java/docs).
 
-This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.2.50 and above, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2017/2018/2019 and [Elektron SDK - Java edition](https://developers.refinitiv.com/elektron/elektron-sdk-java) 1.2.x and 1.3.x versions.
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.2.50 and above, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2017/2018/2019 and [Refinitiv Real-Time SDK - Java edition](https://developers.refinitiv.com/elektron/elektron-sdk-java) 1.2.x and 1.3.x versions.
+
+The example project has been tested with Real-Time SDK Java version 1.5.1 (EMA Java 3.5.1 - maven dependency: ```com.thomsonreuters.ema:ema:3.5.1.0```).
 
 ## Kotlin Overview
 
-[Kotlin](https://kotlinlang.org/) is a statically-typed programming language developed by [Jetbrains](https://www.jetbrains.com/) that runs on the Java virtual machine. Kotlin is a first-class programming language on Android OS. Kotlin interoperates with Java code and is reliant on Java code from the existing Java Class Library/Framework. Kotlin syntax aims for reducing Java language verbosity and complexity. The language is also designed with Java Interoperability in mind. Existing Java code (and EMA Java libraries) can be called from Kotlin in a natural way. 
+[Kotlin](https://kotlinlang.org/) is a statically-typed programming language developed by [Jetbrains](https://www.jetbrains.com/) that runs on the Java virtual machine. Kotlin is a first-class programming language on Android OS. Kotlin interpolates with Java code and is reliant on Java code from the existing Java Class Library/Framework. Kotlin syntax aims for reducing Java language verbosity and complexity. The language is also designed with Java Interoperability in mind. Existing Java code (and EMA Java libraries) can be called from Kotlin in a natural way. 
 
 Although Kotlin source code can also be compiled to JavaScript and Native code, this example project focus only the JVM target environment.
 
 ## Prerequisite
 This example requires the following dependencies software.
 1. Oracle Java 8 SDK.
-2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017 and above. You can download Intelli IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
-3. [Elektron SDK Java Libraries](https://mvnrepository.com/artifact/com.thomsonreuters.ema/ema) via Maven Central web site. You can also download the SDK documents and examples from [Elektron SDK - Java: Download page](https://developers.refinitiv.com/elektron/elektron-sdk-java/downloads) or [GitHub](https://github.com/Refinitiv/Elektron-SDK) page.
+2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017 and above. You can download IntelliJ IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
+3. [Refinitiv Real-Time SDK (RTSDK) Java Libraries](https://mvnrepository.com/artifact/com.thomsonreuters.ema/ema) via Maven Central web site. You can also download the SDK documents and examples from [Refinitiv Real-Time SDK - Java: Download page](https://developers.refinitiv.com/elektron/elektron-sdk-java/downloads) or [GitHub](https://github.com/Refinitiv/Real-Time-SDK) page.
+4. Internet connection.
 <!-- 
 4. If you prefer to use Kotlin command line compiler, [Apache ANT](http://ant.apache.org/) version 1.8.2 and above is required.
 5. If you prefer to use Kotlin [command line compiler](https://github.com/JetBrains/kotlin/releases/latest), you can manual download and install it by following an instruction in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html).
@@ -38,9 +41,9 @@ This example requires the following dependencies software.
 - *Kotlin_Consumer_100.kt*: A basic consumer application source code 
 - *Kotlin_Consumer_220.kt*: Consumer application source code that show how to handle incoming data
 - *Kotlin_IProvider_200.kt*: Interactive Provider application source code
-- *libs/* folder: Elektron SDK libraries files folder
-- *etc/* folder: Elektron Data Dictionary files folder (RDMFieldDictionary and enumtype.def files)
-- *EmaConfig.xml*: Elektron SDK Java Configuration file
+- *libs/* folder: RTSDK libraries files folder
+- *etc/* folder: RTSDK Dictionary files folder (RDMFieldDictionary and enumtype.def files)
+- *EmaConfig.xml*: RTSDK Java Configuration file
 - *.idea/* folder, *Kotlin_EMA.iml*: IntelliJ IDEA project file and folder
 - *LICENSE.md*: License declaration file
 - *README.md*: readme file
@@ -72,7 +75,7 @@ This example requires the following dependencies software.
 
     ![intellij](./images/mavencentral/intelliJ_16_blue.png "Setup Project Library")
 
-8. For this development purpose, input ```com.thomsonreuters.ema:ema:3.3.0.1``` for EMA Java 3.3.0 G1 which is the latest Development version from the Maven Central repository. Then set IntelliJ to download all required libraries to *D:\code\Kotlin_proj\libs* folder location. For production purpose, I recommend ```com.thomsonreuters.ema:ema:3.3.0.0``` for EMA Java 3.3.0 L1 which is an official stable version.
+8. For this development purpose, input ```com.thomsonreuters.ema:ema:3.3.0.1``` for EMA Java 3.3.0 G1 which is the latest Development version from the Maven Central repository. Then set IntelliJ to download all required libraries to *D:\code\Kotlin_proj\libs* folder location. For production purpose, I recommend ```com.thomsonreuters.ema:ema:3.3.0.0``` for EMA Java 3.3.0 L1 which is an official stable version. *As of September 2020*, the latest  official supported version of EMA Java API is 3.5.1 (```com.thomsonreuters.ema:ema:3.5.1.0```).
 
     ![intellij](./images/mavencentral/intelliJ_17_blue.png "add EMA Java libraries from Maven Central")
 
@@ -228,12 +231,12 @@ This example requires the following dependencies software.
 
 ## References
 For further details, please check out the following resources:
-* [Elektron Java API page](https://developers.refinitiv.com/elektron/elektron-sdk-java/) on the [Refinitiv Developer Community](https://developers.refinitiv.com/) web site.
-* [Elektron SDK Family](https://developers.refinitiv.com/elektron) page.
+* [Refinitiv Real-Time SDK Java page](https://developers.refinitiv.com/elektron/elektron-sdk-java/) on the [Refinitiv Developer Community](https://developers.refinitiv.com/) web site.
+* [Refinitiv Real-Time SDK Family](https://developers.refinitiv.com/elektron) page.
 * [Kotlin programming language: Reference](https://kotlinlang.org/docs/reference/) page.
 * [Kotlin programming language: Tutorials](https://kotlinlang.org/docs/tutorials/) page.
-* [Elektron Message API Java Quick Start](https://developers.refinitiv.com/elektron/elektron-sdk-java/quick-start)
-* [Developer Webinar: Introduction to Enterprise App Creation With Open-Source Elektron Message API](https://www.youtube.com/watch?v=2pyhYmgHxlU)
-* [Developer Article: 10 important things you need to know before you write an Elektron Real Time application](https://developers.refinitiv.com/article/10-important-things-you-need-know-you-write-elektron-real-time-application)
+* [Enterprise Message API Java Quick Start](https://developers.refinitiv.com/elektron/elektron-sdk-java/quick-start)
+* [Developer Webinar: Introduction to Enterprise App Creation With Open-Source Enterprise Message API](https://www.youtube.com/watch?v=2pyhYmgHxlU)
+* [Developer Article: 10 important things you need to know before you write an Enterprise Real Time application](https://developers.refinitiv.com/article/10-important-things-you-need-know-you-write-elektron-real-time-application)
 
-For any question related to this article or Elektron Message API page, please use the Developer Community [Q&A Forum](https://community.developers.thomsonreuters.com/).
+For any question related to this article or Enterprise Message API page, please use the Developer Community [Q&A Forum](https://community.developers.refinitiv.com/).
