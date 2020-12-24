@@ -1,22 +1,29 @@
-package com.thomsonreuters.elektron.kotlin
+//|-----------------------------------------------------------------------------
+//|            This source code is provided under the Apache 2.0 license      --
+//|  and is provided AS IS with no warranty or guarantee of fit for purpose.  --
+//|                See the project's LICENSE.md for details.                  --
+//|            Copyright (C) 2017-2020 Refinitiv. All rights reserved.        --
+//|-----------------------------------------------------------------------------
+
+package com.refinitiv.realtime.kotlin
 
 import kotlin.collections.Iterator
-import com.thomsonreuters.ema.access.Msg
-import com.thomsonreuters.ema.access.AckMsg
-import com.thomsonreuters.ema.access.GenericMsg
-import com.thomsonreuters.ema.access.RefreshMsg
-import com.thomsonreuters.ema.access.StatusMsg
-import com.thomsonreuters.ema.access.UpdateMsg
-import com.thomsonreuters.ema.access.Data
-import com.thomsonreuters.ema.access.DataType
-import com.thomsonreuters.ema.access.DataType.DataTypes
-import com.thomsonreuters.ema.access.EmaFactory
-import com.thomsonreuters.ema.access.FieldEntry
-import com.thomsonreuters.ema.access.FieldList
-import com.thomsonreuters.ema.access.OmmConsumer
-import com.thomsonreuters.ema.access.OmmConsumerClient
-import com.thomsonreuters.ema.access.OmmConsumerEvent
-import com.thomsonreuters.ema.access.OmmException
+import com.refinitiv.ema.access.Msg
+import com.refinitiv.ema.access.AckMsg
+import com.refinitiv.ema.access.GenericMsg
+import com.refinitiv.ema.access.RefreshMsg
+import com.refinitiv.ema.access.StatusMsg
+import com.refinitiv.ema.access.UpdateMsg
+import com.refinitiv.ema.access.Data
+import com.refinitiv.ema.access.DataType
+import com.refinitiv.ema.access.DataType.DataTypes
+import com.refinitiv.ema.access.EmaFactory
+import com.refinitiv.ema.access.FieldEntry
+import com.refinitiv.ema.access.FieldList
+import com.refinitiv.ema.access.OmmConsumer
+import com.refinitiv.ema.access.OmmConsumerClient
+import com.refinitiv.ema.access.OmmConsumerEvent
+import com.refinitiv.ema.access.OmmException
 
 //Client class, implements OmmConsumerClient interface
 class AppclientFieldListWalk : OmmConsumerClient {
