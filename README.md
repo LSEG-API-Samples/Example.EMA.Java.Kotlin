@@ -32,7 +32,7 @@ Although Kotlin source code can also be compiled to JavaScript and Native code, 
 ## Prerequisite
 This example requires the following dependencies software.
 1. Oracle Java 8 SDK.
-2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2017 and above. You can download IntelliJ IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
+2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2020.3 and above. You can download IntelliJ IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
 3. [Refinitiv Real-Time SDK (RTSDK) Java Libraries](https://mvnrepository.com/artifact/com.refinitiv.ema/ema) via Maven Central web site. You can also download the SDK documents and examples from [Refinitiv Real-Time SDK - Java: Download page](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java/download) or [GitHub](https://github.com/Refinitiv/Real-Time-SDK) page.
 4. Internet connection.
 <!-- 
