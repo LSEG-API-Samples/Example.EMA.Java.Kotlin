@@ -1,22 +1,29 @@
-package com.thomsonreuters.elektron.kotlin
+//|-----------------------------------------------------------------------------
+//|            This source code is provided under the Apache 2.0 license      --
+//|  and is provided AS IS with no warranty or guarantee of fit for purpose.  --
+//|                See the project's LICENSE.md for details.                  --
+//|            Copyright (C) 2017-2020 Refinitiv. All rights reserved.        --
+//|-----------------------------------------------------------------------------
 
-import com.thomsonreuters.ema.access.EmaFactory
-import com.thomsonreuters.ema.access.FieldList
-import com.thomsonreuters.ema.access.GenericMsg
-import com.thomsonreuters.ema.access.Msg
-import com.thomsonreuters.ema.access.OmmException
-import com.thomsonreuters.ema.access.OmmIProviderConfig
-import com.thomsonreuters.ema.access.OmmProvider
-import com.thomsonreuters.ema.access.OmmProviderClient
-import com.thomsonreuters.ema.access.OmmProviderEvent
-import com.thomsonreuters.ema.access.OmmReal
-import com.thomsonreuters.ema.access.OmmState
-import com.thomsonreuters.ema.access.PostMsg
-import com.thomsonreuters.ema.access.RefreshMsg
-import com.thomsonreuters.ema.access.ReqMsg
-import com.thomsonreuters.ema.access.StatusMsg
-import com.thomsonreuters.ema.access.UpdateMsg
-import com.thomsonreuters.ema.rdm.EmaRdm
+package com.refinitiv.realtime.kotlin
+
+import com.refinitiv.ema.access.EmaFactory
+import com.refinitiv.ema.access.FieldList
+import com.refinitiv.ema.access.GenericMsg
+import com.refinitiv.ema.access.Msg
+import com.refinitiv.ema.access.OmmException
+import com.refinitiv.ema.access.OmmIProviderConfig
+import com.refinitiv.ema.access.OmmProvider
+import com.refinitiv.ema.access.OmmProviderClient
+import com.refinitiv.ema.access.OmmProviderEvent
+import com.refinitiv.ema.access.OmmReal
+import com.refinitiv.ema.access.OmmState
+import com.refinitiv.ema.access.PostMsg
+import com.refinitiv.ema.access.RefreshMsg
+import com.refinitiv.ema.access.ReqMsg
+import com.refinitiv.ema.access.StatusMsg
+import com.refinitiv.ema.access.UpdateMsg
+import com.refinitiv.ema.rdm.EmaRdm
 
 //Client class, implements OmmProviderClient interface
 class IProviderAppClient : OmmProviderClient {

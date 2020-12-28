@@ -1,8 +1,16 @@
+.vscode/
 out/
 src/com/thomsonreuters/elektron/kotlin/TestKotlin.kt
 src/com/thomsonreuters/elektron/kotlin/TestKotlin2.kt
+src/com/refinitiv/realtime/kotlin/TestKotlin.kt
 Diagram/~$Diagram.pptx
 .idea/
 errormsg.txt
 result.txt
 Kotlin_EMA.iml
+libs/
+lib/
+.vscode/
+pom.xml_bk
+target/
+images/old/
