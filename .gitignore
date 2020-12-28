@@ -11,3 +11,6 @@ Kotlin_EMA.iml
 libs/
 lib/
 .vscode/
+pom.xml_bk
+target/
+images/old/

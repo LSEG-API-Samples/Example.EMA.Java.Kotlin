@@ -13,11 +13,11 @@ The consumer applications can consume data from Kotlin_IProvider_200 application
 
 ![connection diagram](./images/diagram.png "connection diagram")
 
-You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Refinitiv Real-Time SDK - Java: Documentation page](https://developers.refinitiv.com/elektron/elektron-sdk-java/docs).
+You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Refinitiv Real-Time SDK - Java: Documentation page](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java/documentation).
 
-This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.2.50 and above, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2017/2018/2019 and [Refinitiv Real-Time SDK - Java edition](https://developers.refinitiv.com/elektron/elektron-sdk-java) 1.2.x and 1.3.x versions.
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.4.21, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2020.3 and [Refinitiv Real-Time SDK - Java edition](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java) 2.0.0 L1 (EMA Java 3.6.0 - Maven Central dependency: ```com.refinitiv.ema:ema:3.6.0.0```) .
 
-The example project has been tested with Real-Time SDK Java version 2.0.0 (EMA Java 3.6.0 - maven dependency: ```com.refinitiv.ema:ema:3.6.0.0```).
+The example project has been implemented and tested on [Kotlin-Maven build tool](https://kotlinlang.org/docs/reference/using-maven.html).
 
 ## IMPORTANT Rebranding Announcement: 
 
@@ -33,19 +33,16 @@ Although Kotlin source code can also be compiled to JavaScript and Native code, 
 This example requires the following dependencies software.
 1. Oracle Java 8 SDK.
 2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2020.3 and above. You can download IntelliJ IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
-3. [Refinitiv Real-Time SDK (RTSDK) Java Libraries](https://mvnrepository.com/artifact/com.refinitiv.ema/ema) via Maven Central web site. You can also download the SDK documents and examples from [Refinitiv Real-Time SDK - Java: Download page](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java/download) or [GitHub](https://github.com/Refinitiv/Real-Time-SDK) page.
-4. Internet connection.
-<!-- 
-4. If you prefer to use Kotlin command-line compiler, [Apache ANT](http://ant.apache.org/) version 1.8.2 and above is required.
-5. If you prefer to use Kotlin [command line compiler](https://github.com/JetBrains/kotlin/releases/latest), you can manually download and install it by following instruction in [Kotlin - Working with the Command Line Compiler page](https://kotlinlang.org/docs/tutorials/command-line.html).
--->
+3. [Refinitiv Real-Time SDK (RTSDK) Java Libraries](https://mvnrepository.com/artifact/com.refinitiv.ema/ema) via [Maven Central website](https://search.maven.org/search?q=g:com.refinitiv.ema). You can also download the SDK documents and examples from [Refinitiv Real-Time SDK - Java: Download page](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java/download) or [GitHub](https://github.com/Refinitiv/Real-Time-SDK) page.
+4. [Apache Maven](https://maven.apache.org/) project management and comprehension tool.
+5. Internet connection.
 
 ## Project Files Structure
 - *src/main/kotlin* folder: Applications source code folder
 - *Kotlin_Consumer_100.kt*: A basic consumer application source code 
 - *Kotlin_Consumer_220.kt*: Consumer application source code that show how to handle incoming data
 - *Kotlin_IProvider_200.kt*: Interactive Provider application source code
-- *libs/* folder: RTSDK libraries files folder
+- *pom.xml* : Kotlin-RTSDK Maven's pom.xml file.
 - *etc/* folder: RTSDK Dictionary files folder (RDMFieldDictionary and enumtype.def files)
 - *EmaConfig.xml*: RTSDK Java Configuration file
 - *LICENSE.md*: License declaration file
@@ -57,7 +54,7 @@ This example requires the following dependencies software.
 
     ![intellij](./images/rebranding/kotlin_1.png "create new project")
 
-3. Select **Kotlin**, Project Templates: **JVM Console Application**, and Project JDK. Finally, input your project folder location and project name
+3. Select **Kotlin**, Project Templates: **JVM Console Application**, Build System: **Maven**, and Project JDK. Finally, input your project folder location and project name
 
     ![intellij](./images/rebranding/kotlin_2.png "select Kotlin/JVM")
 
@@ -65,7 +62,7 @@ This example requires the following dependencies software.
 
     ![intellij](./images/rebranding/kotlin_3.png "set project template")
 
-5. IntelliJ IDEA Java IDE automatically generates an example *main.kt* console application file in *src/main/kotlin* of the project folder.
+5. IntelliJ IDEA Java IDE automatically generates project Maven's pom.xml file, an example *main.kt* console application file in *src/main/kotlin* of the project folder.
 
     ![intellij](./images/rebranding/kotlin_4.png "main.kt example")
 
@@ -77,55 +74,64 @@ This example requires the following dependencies software.
 
     ![intellij](./images/rebranding/kotlin_6.png "main.kt result")
 
-8. Next, Unzip or download the example project folder and copy **src**, **etc** folders and **EmaConfig.xml** file to development directory (example, C:\drive_d\Project\Kotlin_project). The EMA-Kotiln example applications, etc folder, and EmaConfig.xml file will be available in IntelliJ IDEA.
+8. Next, Unzip or download the example project folder and copy **src**, **etc** folders, **EmaConfig.xml** file, and **pom.xml** file (replacing existing one that generated by the IDE) to the development directory (example, C:\drive_d\Project\Kotlin_project). The EMA-Kotiln example applications, etc folder, and EmaConfig.xml file will be available in IntelliJ IDEA.
 
     ![intellij](./images/rebranding/kotlin_7.png "EMA-Kotlin project setup 1")
 
-9. Then we need to add EMA dependencies to the project. Please select **File** menu and choose **Project Structure...** menu.
+9. You may need to open a newly replaced pom.xml file, and click the **reload** button to reload all Kotlin and RTSDK dependencies.
 
     ![intellij](./images/rebranding/kotlin_8.png "EMA-Kotlin project setup 2")
 
-10. Select **Libraries** menu, and then choose **+** menu bar and select **New Project Library from Maven..** setting 
+10. Click on the **Build** menu bar, then choose **Build Project** to build the project (You may choose **Rebuild Project** if you change any source code).
+    ![intellij](./images/rebranding/kotlin_9.png "build project")
 
-    ![intellij](./images/rebranding/kotlin_10.png "EMA-Kotlin project setup 3")
+    ![intellij](./images/rebranding/kotlin_10.png "build project result")
 
-11. Please input ```com.refinitiv.ema:ema:3.6.0.0``` for EMA Java 3.6.0. (RTSDK 2.0.0L1) Then set IntelliJ to download all required libraries to *D:\code\Kotlin_proj\lib* folder location.
+11. Open Kotlin_IProvider_200.kt file, right-click and choose **Run** to start the Kotlin_IProvider_200 provider application.
 
-    ![intellij](./images/rebranding/kotlin_11.png "add EMA Java libraries from Maven Central")
+    ![intellij](./images/rebranding/kotlin_11.png "Running Kotlin_IProvider_200")
 
-12. Then select **Kotlin_project** module.
+12. The Kotlin_IProvider_200 application will be started and waiting for a consumer application.
 
-    ![intellij](./images/rebranding/kotlin_12.png "add EMA Java libraries from Maven Central 2")
+    ![intellij](./images/rebranding/kotlin_12.png "Running Kotlin_IProvider_200 console")
 
-13. IntelliJ automatically downloads all EMA libraries and dependencies to *C:\drive_d\Project\Kotlin_project\lib* folder location.
+13. Open Kotlin_Consumer_220.kt file, right-click and choose **Run** to start the Kotlin_Consumer_220 consumer application.
 
-    ![intellij](./images/rebranding/kotlin_13.png "All libraries are downloaded success")
-
-14. Click on the **Build** menu bar, then choose **Build Project** to build the project (You may choose **Rebuild Project** if you change any source code).
-    ![intellij](./images/rebranding/kotlin_14.png "build project")
-
-    ![intellij](./images/rebranding/kotlin_15.png "build project result")
-
-15. Open Kotlin_IProvider_200.kt file, right-click and choose **Run** to start the Kotlin_IProvider_200 provider application.
-
-    ![intellij](./images/rebranding/kotlin_16.png "Running Kotlin_IProvider_200")
-
-16. The Kotlin_IProvider_200 application will be started and waiting for a consumer application.
-
-    ![intellij](./images/rebranding/kotlin_17.png "Running Kotlin_IProvider_200 console")
-
-17. Open Kotlin_Consumer_220.kt file, right-click and choose **Run** to start the Kotlin_Consumer_220 consumer application.
-
-    ![intellij](./images/rebranding/kotlin_18.png "Running Kotlin_Consumer_220")
+    ![intellij](./images/rebranding/kotlin_13.png "Running Kotlin_Consumer_220")
 
 14. The Kotlin_Consumer_220 application will be started, then connects and consumes data from Kotlin_IProvider_200 application.
+    ![intellij](./images/rebranding/kotlin_14.png "Running Kotlin_Consumer_220 console")
 
-    ![intellij](./images/rebranding/kotlin_19.png "Running Kotlin_Consumer_220 console")
+
+## Build and run the Project with Apache Maven via a command line
+
+1. Create a development directory of your choice (for example, C:\drive_d\Project\Kotlin_project).
+2. Unzip or download the example project folder to a development directory.
+3. Open a console or command prompt to your development directory.
+4. Run ```$>mvn package``` command in a console to build the demo applications into a single-all-dependencies *rtsdk200_kotlin-1.0-SNAPSHOT-jar-with-dependencies.jar* file in the project's *target* folder.
+
+     ![intellij](./images/rebranding/maven_1.png "Building project with Maven")
+
+     ![intellij](./images/rebranding/maven_2.png "Building project with Maven success")
+5. Then you can run Kotlin_IProvider_200 application demo application with the following command:
+
+    *Windows Command Prompt*
+    ```
+    $>java -cp .;target/rtsdk200_kotlin-1.0-SNAPSHOT-jar-with-dependencies.jar com.refinitiv.realtime.kotlin.Kotlin_IProvider_200Kt
+    ```
+
+6. To run Kotlin_Consumer_220.kt demo application, open another console for ema_example folder and run the following command:
+
+    *Windows Command Prompt*
+    ```
+    java -cp .;target/rtsdk200_kotlin-1.0-SNAPSHOT-jar-with-dependencies.jar com.refinitiv.realtime.kotlin.Kotlin_Consumer_220Kt
+    ```
 
 ## Conclusion
 
-After finishing this project, you will understand more about EMA consumer and Interactive Provider applications,  how to develop a Real-Time application using EMA in Kotlin language.
+Kotlin is now a rising star cross-platform, statically typed, general-purpose programming language. The language lets developers implement a concise and expressive code while maintaining full compatibility with Java. 
 
+This language simplicity helps developers write the Real-Time application using EMA/RTSDK in a simple way that simpler and smaller than implement EMA application on the native-Java.
 
 ## References
 For further details, please check out the following resources:
