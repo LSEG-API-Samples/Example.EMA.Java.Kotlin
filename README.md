@@ -2,20 +2,22 @@
 
 ## Overview
 
-This example project shows how to implement the [Enterprise Message API Java (EMA Java)](https://developers.refinitiv.com/elektron/elektron-sdk-java) (formerly known as Elektron Message API) OMM Consumer and OMM Provider applications with Kotlin language. The application source codes are implemented in Kotlin language with EMA Java library. All source code will be compiled to Java Virtual Machine (JVM) compatible Java classes and run in a console.   
+**Update**: September 2021.
+
+This example project shows how to implement the [Enterprise Message API Java (EMA Java)](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java) (formerly known as Elektron Message API) OMM Consumer and OMM Provider applications with Kotlin language. The application source codes are implemented in Kotlin language with EMA Java library. All source code will be compiled to Java Virtual Machine (JVM) compatible Java classes and run in a console.   
 
 The example project contains one Interactive-Provider application and two Consumer applications. 
 - The Kotlin_IProvider_200 shows how to implement a basic RSSL Interactive Provider application. 
 - The Kotlin_Consumer_100 shows how to implement a basic RSSL Consumer application.
 - The Kotlin_Consumer_220 shows how to implement a RSSL Consumer application that handles incoming data for each FID type.
 
-The consumer applications can consume data from Kotlin_IProvider_200 application or other Refinitiv Real-Time data sources (Refinitiv Real-Time Advanced Distribution Server, [Refinitiv Real-Time Test Data](https://developers.refinitiv.com/pages/elektron-test-data-1), etc).
+The consumer applications can consume data from Kotlin_IProvider_200 application or other Refinitiv Real-Time data sources (Refinitiv Real-Time Advanced Distribution Server, etc).
 
 ![connection diagram](./images/diagram.png "connection diagram")
 
-You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Refinitiv Real-Time SDK - Java: Documentation page](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java/documentation).
+You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Refinitiv Real-Time SDK - Java: Documentation page](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java/documentation).
 
-This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.4.21, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2020.3 and [Refinitiv Real-Time SDK - Java edition](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java) 2.0.0 L1 (EMA Java 3.6.0 - Maven Central dependency: ```com.refinitiv.ema:ema:3.6.0.0```) .
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.4.21, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2020.3 and [Refinitiv Real-Time SDK - Java edition](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java) 2.0.0 L1 (EMA Java 3.6.0 - Maven Central dependency: ```com.refinitiv.ema:ema:3.6.0.0```) .
 
 The example project has been implemented and tested on [Kotlin-Maven build tool](https://kotlinlang.org/docs/reference/using-maven.html).
 
@@ -33,7 +35,7 @@ Although Kotlin source code can also be compiled to JavaScript and Native code, 
 This example requires the following dependencies software.
 1. Oracle Java 8 SDK.
 2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2020.3 and above. You can download IntelliJ IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
-3. [Refinitiv Real-Time SDK (RTSDK) Java Libraries](https://mvnrepository.com/artifact/com.refinitiv.ema/ema) via [Maven Central website](https://search.maven.org/search?q=g:com.refinitiv.ema). You can also download the SDK documents and examples from [Refinitiv Real-Time SDK - Java: Download page](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java/download) or [GitHub](https://github.com/Refinitiv/Real-Time-SDK) page.
+3. [Refinitiv Real-Time SDK (RTSDK) Java Libraries](https://mvnrepository.com/artifact/com.refinitiv.ema/ema) via [Maven Central website](https://search.maven.org/search?q=g:com.refinitiv.ema). You can also download the SDK documents and examples from [Refinitiv Real-Time SDK - Java: Download page](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java/download) or [GitHub](https://github.com/Refinitiv/Real-Time-SDK) page.
 4. [Apache Maven](https://maven.apache.org/) project management and comprehension tool.
 5. Internet connection.
 
@@ -135,11 +137,11 @@ This language simplicity helps developers write the Real-Time application using 
 
 ## References
 For further details, please check out the following resources:
-* [Refinitiv Real-Time SDK Java page](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java) on the [Refinitiv Developer Community](https://developers.refinitiv.com/) web site.
+* [Refinitiv Real-Time SDK Java page](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java) on the [Refinitiv Developer Community](https://developers.refinitiv.com/) web site.
 * [Refinitiv Real-Time SDK Family](https://developers.refinitiv.com/en/use-cases-catalog/refinitiv-real-time) page.
 * [Kotlin programming language: Reference](https://kotlinlang.org/docs/reference/) page.
 * [Kotlin programming language: Tutorials](https://kotlinlang.org/docs/tutorials/) page.
-* [Enterprise Message API Java Quick Start](https://developers.refinitiv.com/en/api-catalog/elektron/elektron-sdk-java/quick-start)
+* [Enterprise Message API Java Quick Start](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java/quick-start)
 * [Developer Webinar: Introduction to Enterprise App Creation With Open-Source Enterprise Message API](https://www.youtube.com/watch?v=2pyhYmgHxlU)
 * [Developer Article: 10 important things you need to know before you write an Enterprise Real Time application](https://developers.refinitiv.com/article/10-important-things-you-need-know-you-write-elektron-real-time-application)
 
