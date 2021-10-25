@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Update**: September 2021.
+**Update**: October 2021.
 
 This example project shows how to implement the [Enterprise Message API Java (EMA Java)](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java) (formerly known as Elektron Message API) OMM Consumer and OMM Provider applications with Kotlin language. The application source codes are implemented in Kotlin language with EMA Java library. All source code will be compiled to Java Virtual Machine (JVM) compatible Java classes and run in a console.   
 
@@ -17,7 +17,7 @@ The consumer applications can consume data from Kotlin_IProvider_200 application
 
 You can find more detail regarding the OMM Consumer and OMM Interactive Provider interaction in EMA Java RDM Usage Guide sections *2.4 OMM Consumer / OMM Interactive Provider Initial Interaction* and *2.5 Sending and Receiving Content*. The EMA Java RDM Usage Guide is available in [Refinitiv Real-Time SDK - Java: Documentation page](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java/documentation).
 
-This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.4.21, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2020.3 and [Refinitiv Real-Time SDK - Java edition](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java) 2.0.0 L1 (EMA Java 3.6.0 - Maven Central dependency: ```com.refinitiv.ema:ema:3.6.0.0```) .
+This example project and source code are compatible with [Kotlin](https://kotlinlang.org/) version 1.5.31, [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE versions 2020.3/2021.2 and [Refinitiv Real-Time SDK - Java edition](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java) 2.0.3 L1 (EMA Java 3.6.3 - Maven Central dependency: ```com.refinitiv.ema:ema:3.6.3.0```) .
 
 The example project has been implemented and tested on [Kotlin-Maven build tool](https://kotlinlang.org/docs/reference/using-maven.html).
 
@@ -33,7 +33,7 @@ Although Kotlin source code can also be compiled to JavaScript and Native code, 
 
 ## Prerequisite
 This example requires the following dependencies software.
-1. Oracle Java 8 SDK.
+1. Java 11 SDK.
 2. [IntelliJ IDEA](https://www.jetbrains.com/idea/) Java IDE version 2020.3 and above. You can download IntelliJ IDEA Community Edition from this [page](https://www.jetbrains.com/idea/download/index.html). 
 3. [Refinitiv Real-Time SDK (RTSDK) Java Libraries](https://mvnrepository.com/artifact/com.refinitiv.ema/ema) via [Maven Central website](https://search.maven.org/search?q=g:com.refinitiv.ema). You can also download the SDK documents and examples from [Refinitiv Real-Time SDK - Java: Download page](https://developers.refinitiv.com/en/api-catalog/refinitiv-real-time-opnsrc/rt-sdk-java/download) or [GitHub](https://github.com/Refinitiv/Real-Time-SDK) page.
 4. [Apache Maven](https://maven.apache.org/) project management and comprehension tool.
@@ -126,7 +126,7 @@ This example requires the following dependencies software.
 
     *Windows Command Prompt*
     ```
-    java -cp .;target/rtsdk200_kotlin-1.0-SNAPSHOT-jar-with-dependencies.jar com.refinitiv.realtime.kotlin.Kotlin_Consumer_220Kt
+    $>java -cp .;target/rtsdk200_kotlin-1.0-SNAPSHOT-jar-with-dependencies.jar com.refinitiv.realtime.kotlin.Kotlin_Consumer_220Kt
     ```
 
 ## Conclusion

@@ -5,8 +5,6 @@ src/com/thomsonreuters/elektron/kotlin/TestKotlin2.kt
 src/com/refinitiv/realtime/kotlin/TestKotlin.kt
 Diagram/~$Diagram.pptx
 .idea/
-errormsg.txt
-result.txt
 Kotlin_EMA.iml
 libs/
 lib/
@@ -14,3 +12,6 @@ lib/
 pom.xml_bk
 target/
 images/old/
+.classpath
+.project
+.settings/
