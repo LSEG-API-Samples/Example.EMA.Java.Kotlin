@@ -14,7 +14,7 @@
         <kotlin.code.style>official</kotlin.code.style>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
         <!--<kotlin.version>1.4.21</kotlin.version>-->
-        <kotlin.version>1.5.31</kotlin.version>
+        <kotlin.version>1.6.0</kotlin.version>
         <main.class>com.refinitiv.realtime.kotlin.Kotlin_Consumer_100Kt</main.class>
         <ema.version>3.6.3.0</ema.version>
     </properties>
